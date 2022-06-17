@@ -1,0 +1,49 @@
+<div  class="d-flex justify-content-center">
+    <div class="jumbotron">
+        <h1 class="display-4">BIENVENIDO A NUESTRA FERRETERÍA WEB :D </h1>        
+        <div class="d-flex justify-content-center">            
+            <button type="submit" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#exampleModalLong">
+            Login
+            </button>
+            <a mat-icon-button class="Tacos" aria-label="Home"
+            routerLink="/home" routerLinkActive="active" color="primary">
+            <button type="submit" class="btn btn-primary btn-lg" (click)="sinlogin()" >
+              Sin Login
+            </button>
+            </a>  
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">    
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Inicio de Sesion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">            
+                <form class="needs-validation">
+                  <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                      <label for="validationCustom01" for="uname">Nombre de Usuario:</label>
+                      <input #nombre type="text" class="form-control" id="uname" name="uname" placeholder="Ingrese Usuario" required>    
+                    </div>                
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                      <label for="validationCustom01" for="psw">Contraseña:</label>
+                      <input #password type="password" class="form-control" id="psw" name="psw" placeholder="Ingresa Contraseña" required>    
+                    </div>
+                  </div>     
+                  <button type="button" class="btn btn-primary" (click)="Login(nombre.value,password.value)">Iniciar Sesion</button>
+                </form>            
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
