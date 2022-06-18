@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProductosComponent } from './productos/productos.component';
 import { QRCodeModule } from 'angular2-qrcode';
 import { FormsModule } from '@angular/forms';
+import { AnswerandquestionComponent } from './answerandquestion/answerandquestion.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     GenerarQRComponent,
     IniciarsesionComponent,
     RegisterComponent,
-    ProductosComponent
+    ProductosComponent,
+    AnswerandquestionComponent
   ],
   imports: [
     BrowserModule,
