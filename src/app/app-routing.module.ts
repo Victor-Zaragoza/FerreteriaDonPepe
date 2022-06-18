@@ -9,6 +9,7 @@ import { ProductosComponent } from './productos/productos.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { AnswerandquestionComponent } from './answerandquestion/answerandquestion.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {path:'',redirectTo: 'home',pathMatch:'full'},
@@ -28,6 +29,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule, ReactiveFormsModule]
 })
 export class AppRoutingModule { }
