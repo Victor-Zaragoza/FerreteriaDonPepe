@@ -16,7 +16,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProductosComponent } from './productos/productos.component';
 import { QRCodeModule } from 'angular2-qrcode';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-<<<<<<< HEAD
+
 import { CreateArticleComponent } from './create-article/create-article.component';
 import { ListArticlesComponent } from './list-articles/list-articles.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -26,9 +26,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
-=======
+
 import { AnswerandquestionComponent } from './answerandquestion/answerandquestion.component';
->>>>>>> 154608afa1a241231b09202893e6434c64ee6dbe
 
 @NgModule({
   declarations: [
@@ -40,12 +39,10 @@ import { AnswerandquestionComponent } from './answerandquestion/answerandquestio
     IniciarsesionComponent,
     RegisterComponent,
     ProductosComponent,
-<<<<<<< HEAD
+
     CreateArticleComponent,
     ListArticlesComponent
-=======
-    AnswerandquestionComponent
->>>>>>> 154608afa1a241231b09202893e6434c64ee6dbe
+
   ],
   imports: [
     BrowserModule,
@@ -54,7 +51,7 @@ import { AnswerandquestionComponent } from './answerandquestion/answerandquestio
     AngularFirestoreModule,
     QRCodeModule,
     FormsModule,
-<<<<<<< HEAD
+
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
@@ -64,9 +61,7 @@ import { AnswerandquestionComponent } from './answerandquestion/answerandquestio
     provideFunctions(() => getFunctions()),
     provideRemoteConfig(() => getRemoteConfig()),
     provideStorage(() => getStorage()),
-=======
-    ReactiveFormsModule
->>>>>>> 154608afa1a241231b09202893e6434c64ee6dbe
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

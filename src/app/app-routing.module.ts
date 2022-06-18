@@ -8,13 +8,13 @@ import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component'
 import { ProductosComponent } from './productos/productos.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
-<<<<<<< HEAD
+
 import { ListArticlesComponent } from './list-articles/list-articles.component';
 import { CreateArticleComponent } from './create-article/create-article.component';
 
-=======
+
 import { AnswerandquestionComponent } from './answerandquestion/answerandquestion.component';
->>>>>>> 154608afa1a241231b09202893e6434c64ee6dbe
+
 
 const routes: Routes = [
   {path:'',redirectTo: 'home',pathMatch:'full'},
