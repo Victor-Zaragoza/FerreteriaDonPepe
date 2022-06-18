@@ -40,4 +40,19 @@
               
         </div>
     </div>
+
+    <h1>Grafica Cantidad de productos</h1>
+      <canvas baseChart
+          
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [type]="'bar'"
+             >
+      </canvas>
+      <hr>
+      <button class="btn-primary" (click)="llenargrafica()">OBSERVAR GRAFICA</button>
+      <hr>
+      
 </div>

@@ -14,6 +14,7 @@ import { CreateArticleComponent } from './create-article/create-article.componen
 
 
 import { AnswerandquestionComponent } from './answerandquestion/answerandquestion.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -37,6 +38,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule, ReactiveFormsModule]
 })
 export class AppRoutingModule { }
