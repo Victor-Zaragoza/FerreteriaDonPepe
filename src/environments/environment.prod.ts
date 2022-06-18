@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const environment = {
   firebase: {
     apiKey: "AIzaSyCJhVniR4gJB1ZogaVVkro7KNgDdwopEu8",
@@ -9,3 +10,8 @@ export const environment = {
   },
   production: true
 };
+=======
+export const environment = {
+  production: true
+};
+>>>>>>> origin/aram

@@ -74,8 +74,8 @@
   box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.22) !important;
 }
 .btn.btn-primary {
-  background: #F77E21 !important;
-  border-color: #F77E21 !important;
+  background: #1089ff !important;
+  border-color: #1089ff !important;
   color: #fff;
 }
 .btn.btn-primary:hover,
@@ -219,7 +219,6 @@ select.form-control:focus::-ms-value {
 
 .contact-wrap {
   background: #fff;
-  border-radius: 10%;
 }
 
 .ftco-section {
@@ -335,3 +334,85 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to bottom right, rgb(211, 206, 234), rgb(87, 219, 245,1))
     }
+
+  @media only screen and (max-width: 320px) {
+      .card-columns {
+          -moz-column-count: 1;
+          -webkit-column-count: 1;
+          column-count: 1;
+      }
+      body{
+        align-self: start;
+        height: 162vh;
+      }
+  }
+  
+  @media only screen and (min-width: 321px) and (max-width: 640px){
+      .card-columns {
+          -moz-column-count: 2;
+          -webkit-column-count: 2;
+          column-count: 2;
+      }
+      body{
+        align-self: start;
+        height: 162vh;
+      }
+  }
+  @media only screen and (min-width: 641px) and (max-width: 960px){
+      .card-columns {
+          -moz-column-count: 2;
+          -webkit-column-count: 2;
+          column-count: 2;
+      }
+      body{
+          align-self: start;
+          height: 144vh;
+      }
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1280px){
+      .card-columns {
+          -moz-column-count: 3;
+          -webkit-column-count: 3;
+          column-count: 3;
+      }
+      body{  
+          align-self: start;
+          height: 93vh;
+      }
+  }
+  @media only screen and (min-width: 1281px) and (max-width: 1600px){
+      .card-columns {
+          -moz-column-count: 4;
+          -webkit-column-count: 4;
+          column-count: 4;
+      }
+      body{
+          align-self: start;
+          height: 94vh;        
+      }
+      .divxd{
+        padding: 100px 350px;
+      }  
+  }
+  @media only screen and (min-width: 1601px){
+      .card-columns {
+          -moz-column-count: 5;
+          -webkit-column-count: 5;
+          column-count: 5;
+      }
+      body{
+          align-self: start;
+          height: 94vh;        
+      }
+  }
+  @media only screen and (min-width: 1602px) and (max-width: 1920px){
+    .card-columns {
+        -moz-column-count: 5;
+        -webkit-column-count: 5;
+        column-count: 5;
+    }
+    body{
+        align-self: start;
+        height: 85vh;      
+    }
+}

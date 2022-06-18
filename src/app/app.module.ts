@@ -1,10 +1,10 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './navbar/navbar.component';
@@ -16,7 +16,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProductosComponent } from './productos/productos.component';
 import { QRCodeModule } from 'angular2-qrcode';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { FooterComponent } from './footer/footer.component'
 import { CreateArticleComponent } from './create-article/create-article.component';
 import { ListArticlesComponent } from './list-articles/list-articles.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -42,7 +42,7 @@ import { AboutComponent } from './about/about.component';
     ProductosComponent,
     AnswerandquestionComponent,
     AboutComponent,
-
+    FooterComponent,
     CreateArticleComponent,
     ListArticlesComponent
 
@@ -70,4 +70,6 @@ import { AboutComponent } from './about/about.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+
