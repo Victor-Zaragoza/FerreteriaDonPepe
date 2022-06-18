@@ -10,6 +10,8 @@ import { GenerarQRComponent } from './generarQR/generarQR.component';
 import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductosComponent } from './productos/productos.component';
+import { QRCodeModule } from 'angular2-qrcode';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ProductosComponent } from './productos/productos.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    QRCodeModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
