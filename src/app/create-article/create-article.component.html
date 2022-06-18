@@ -1,0 +1,23 @@
+<div class="container pt-4">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5>{{title}}</h5>
+                    <span *ngIf="submitted && createArticle.invalid" class="badge badge-danger" style="background-color: red;">OBLIGATORIO</span>
+                    <form class="mt-4" [formGroup]="createArticle" (ngSubmit)="addEditArticle()">
+                        <input type="text" class="text form-control form-control-lg" formControlName="image"  placeholder="IMAGE">
+                        <input type="text" class="text form-control form-control-lg" formControlName="name"  placeholder="NAME">   
+                        <input type="text" class="form-control form-control-lg mt-3" formControlName="description" placeholder="DESCRIPTION">
+                        <input type="number" class="form-control form-control-lg mt-3" formControlName="price" placeholder="PRICE">
+                        <input type="number" class="form-control form-control-lg mt-3" formControlName="total" placeholder="TOTAL">
+                        <div class="mt-3">
+                            <button type="text" class="btn btn-secondary btn-lg" style="margin-right: 10px;" routerLink="/list-articles">BACK</button>
+                            <button type="submit" class="btn btn-dark btn-lg">ADD</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
