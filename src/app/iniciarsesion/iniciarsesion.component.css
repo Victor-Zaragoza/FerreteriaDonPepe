@@ -17,5 +17,14 @@ height: 100%;
 div #footer{
 background-color: #004a8d;
 }
-
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #93c7fb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom right, rgb(193, 187, 221), rgb(87, 219, 245));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom right, rgb(197, 190, 224), rgb(87, 219, 245,1))
+    }
 
