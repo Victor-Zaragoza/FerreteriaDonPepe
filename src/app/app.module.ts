@@ -26,7 +26,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
-
+import { NgChartsModule } from 'ng2-charts';
 import { AnswerandquestionComponent } from './answerandquestion/answerandquestion.component';
 import { AboutComponent } from './about/about.component';
 
@@ -40,15 +40,12 @@ import { AboutComponent } from './about/about.component';
     IniciarsesionComponent,
     RegisterComponent,
     ProductosComponent,
-<<<<<<< HEAD
     AnswerandquestionComponent,
-    AboutComponent
-=======
+    AboutComponent,
 
     CreateArticleComponent,
     ListArticlesComponent
 
->>>>>>> main
   ],
   imports: [
     BrowserModule,
@@ -57,7 +54,7 @@ import { AboutComponent } from './about/about.component';
     AngularFirestoreModule,
     QRCodeModule,
     FormsModule,
-
+    NgChartsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
@@ -68,6 +65,7 @@ import { AboutComponent } from './about/about.component';
     provideRemoteConfig(() => getRemoteConfig()),
     provideStorage(() => getStorage()),
     ReactiveFormsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
