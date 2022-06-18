@@ -1,0 +1,146 @@
+.footer{
+    overflow: hidden; 
+    position: sticky;
+    top: 100%;
+    background-color: #004a8d;
+    padding: 20px 10px;    
+}
+
+h1{
+    color: #fff;
+    font-size: 25px;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+a:hover{
+    color: var(--primary-color);
+}
+
+p{
+    color: #fff;
+    font-size: 14px;
+}
+
+body{
+    height: 12vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+    padding: 15px 20px;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 320px) {
+    .card-columns {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+    body{
+        align-self: start;
+        height: 18vh;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 640px){
+    .card-columns {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+    body{
+        align-self: start;
+        height: 18vh;
+    }
+}
+@media only screen and (min-width: 641px) and (max-width: 960px){
+    .card-columns {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+    body{
+        align-self: start;
+        height: 14vh;
+    }
+}
+@media only screen and (min-width: 961px) and (max-width: 1280px){
+    .card-columns {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+    body{
+
+        align-self: start;
+        height: 14vh;
+    }
+    h1{
+        position: absolute;
+        font-size: 25px;
+        padding: 12px 5px;
+    }
+    p{
+        position: absolute;
+        font-size: 13px;
+        padding: 32px 0px;
+    }
+    img{
+        padding: 22px 3px;
+        position: relative;
+    }
+    h3{
+        position: absolute;
+        font-size: 12px;
+        padding: 0px 0px;
+    }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1600px){
+    .card-columns {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+    body{
+        align-self: start;
+        height: 10vh;        
+    }
+    h1,p{
+        font-size: 15px;
+        padding: 2px 5px;
+    }
+    h3{
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 1601px){
+    .card-columns {
+        -moz-column-count: 5;
+        -webkit-column-count: 5;
+        column-count: 5;
+    }
+    body{
+        align-self: start;
+        height: 10vh;        
+    }
+    h1{
+        font-size: 22px;
+        padding: 0px 0px;
+        position: absolute;
+    }
+    p{
+        position: relative;
+        font-size: 10px;
+        padding: 1px 2px;
+    }
+    img{
+        padding: 1px 2px;
+    }
+}
