@@ -38,12 +38,9 @@ background-color: #004a8d;
           align-self: start;
           height: 100vh;
         }
-<<<<<<< HEAD
-=======
         .divxd{
             padding: 101px 0px;
         }
->>>>>>> origin/aram
     }
     
     @media only screen and (min-width: 321px) and (max-width: 640px){
@@ -76,12 +73,9 @@ background-color: #004a8d;
         .imgdx{
             padding: 15px 160px;
         }
-<<<<<<< HEAD
-=======
         .pxd{            
             padding: 0px 50px;
         }
->>>>>>> origin/aram
     }
     @media only screen and (min-width: 961px) and (max-width: 1280px){
         .card-columns {
@@ -96,13 +90,9 @@ background-color: #004a8d;
         .imgdx{            
             padding: 0px 130px;
         }
-<<<<<<< HEAD
-
-=======
         .pxd{            
             padding: 0px 60px;
         }
->>>>>>> origin/aram
     }
     @media only screen and (min-width: 1281px) and (max-width: 1600px){
         .card-columns {
@@ -118,12 +108,9 @@ background-color: #004a8d;
             top:110%;
             padding: 190px 0px;
         }
-<<<<<<< HEAD
-=======
         .pxd{            
             padding: 0px 70px;
         }
->>>>>>> origin/aram
     }
     @media only screen and (min-width: 1601px){
         .card-columns {
@@ -136,9 +123,6 @@ background-color: #004a8d;
             height: 90vh;        
         }
         .divxd{
-<<<<<<< HEAD
-            padding: 110px 0px;
-=======
             padding: 120px 0px;
         }
         p{
@@ -147,7 +131,6 @@ background-color: #004a8d;
         }
         .pxd{            
             padding: 0px 100px;
->>>>>>> origin/aram
         }
     }
     @media only screen and (min-width: 1602px) and (max-width: 1920px){
@@ -161,9 +144,6 @@ background-color: #004a8d;
             height: 90vh;      
         }
         .divxd{
-<<<<<<< HEAD
-            padding: 170px 0px;
-=======
             padding: 170px 90px;
         }
         p{
@@ -171,6 +151,5 @@ background-color: #004a8d;
         }
         label{
             font-size: 22px;
->>>>>>> origin/aram
         }
     }

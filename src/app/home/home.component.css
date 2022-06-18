@@ -33,8 +33,6 @@ img{
     width: 250px;
     align-items:center;
 }
-<<<<<<< HEAD
-=======
 @media only screen and (min-width: 321px) and (max-width: 640px){
     .card-columns {
         -moz-column-count: 2;
@@ -203,4 +201,3 @@ img{
         padding: 0px 2px;
     }
 }
->>>>>>> origin/aram

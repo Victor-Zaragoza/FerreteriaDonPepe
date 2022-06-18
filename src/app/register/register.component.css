@@ -17,8 +17,6 @@
     }
     .card-registration .select-arrow {
     top: 13px;
-<<<<<<< HEAD
-=======
     }
     @media only screen and (min-width: 320px) and (max-width: 321px){
         .card-columns {
@@ -142,5 +140,4 @@
             padding-bottom:100px ;
             padding: 0px 0px;
         }
->>>>>>> origin/aram
     }
