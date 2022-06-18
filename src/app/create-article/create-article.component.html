@@ -6,7 +6,9 @@
                     <h5>{{title}}</h5>
                     <span *ngIf="submitted && createArticle.invalid" class="badge badge-danger" style="background-color: red;">OBLIGATORIO</span>
                     <form class="mt-4" [formGroup]="createArticle" (ngSubmit)="addEditArticle()">
+
                         <input type="text" class="text form-control form-control-lg" formControlName="image"  placeholder="IMAGE">
+                        
                         <input type="text" class="text form-control form-control-lg" formControlName="name"  placeholder="NAME">   
                         <input type="text" class="form-control form-control-lg mt-3" formControlName="description" placeholder="DESCRIPTION">
                         <input type="number" class="form-control form-control-lg mt-3" formControlName="price" placeholder="PRICE">
