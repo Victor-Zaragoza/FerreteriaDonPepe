@@ -1,1 +1,24 @@
-<h1>Pagina para crear un QR</h1>
+
+<h2>Codigo QR</h2>
+
+<div>
+  <qr-code [value]="values" [size]="width" [level]="level"></qr-code> 
+  <br>
+</div>
+<div>
+<label>
+  Aqui ponen lo que vayamos a hacer con el QR <br /> 
+  <br>
+  <input [(ngModel)]="values" placeholder="Nombre" />
+
+</label>
+</div>
+<div>
+<br />
+<h3></h3>
+<strong></strong>
+<button type="button" class="btn btn-primary" (click)="qrData(this.myitem)">Generar</button>
+
+
+
+</div>
