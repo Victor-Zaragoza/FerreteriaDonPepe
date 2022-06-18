@@ -74,8 +74,8 @@
   box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.22) !important;
 }
 .btn.btn-primary {
-  background: #1089ff !important;
-  border-color: #1089ff !important;
+  background: #F77E21 !important;
+  border-color: #F77E21 !important;
   color: #fff;
 }
 .btn.btn-primary:hover,
@@ -219,6 +219,7 @@ select.form-control:focus::-ms-value {
 
 .contact-wrap {
   background: #fff;
+  border-radius: 10%;
 }
 
 .ftco-section {
