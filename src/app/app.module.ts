@@ -13,6 +13,7 @@ import { ProductosComponent } from './productos/productos.component';
 import { QRCodeModule } from 'angular2-qrcode';
 import { FormsModule } from '@angular/forms';
 import { AnswerandquestionComponent } from './answerandquestion/answerandquestion.component';
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AnswerandquestionComponent } from './answerandquestion/answerandquestio
     IniciarsesionComponent,
     RegisterComponent,
     ProductosComponent,
-    AnswerandquestionComponent
+    AnswerandquestionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
