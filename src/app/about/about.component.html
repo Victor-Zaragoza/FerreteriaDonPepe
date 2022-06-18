@@ -5,13 +5,14 @@
   <link rel="stylesheet" href="./about.component.css" />
 </head>
 <body>
-  
-  <section class="ftco-section vh-100 gradient-custom">
+  <div class="gradient-custom">
+  <section class="ftco-section ">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8 mb-5">
           <h2 class="heading-section"><b style="color: #F77E21;">➤ </b>Contacto</h2>
-          <p class="heading-section">Si tienes alguna pregunta o comentario, déjanos tus datos o llámanos. Nos pondremos en contacto contigo lo antes posible.</p>
+          <h4 class="heading-section">Herramientas, para las mejores personas.</h4>
+          <p class="heading-section">Si tienes alguna pregunta, déjanos tus datos o llámanos, nos pondremos en contacto contigo lo antes posible.</p>
         </div>
       </div>
       <div class="row justify-content-center">
@@ -25,29 +26,32 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <input type="text" class="form-control" name="Nombre" id="name" placeholder="Email"
-                          />
+                          <input type="text" class="form-control" name="Nombre" placeholder="Nombre" formControlName="name" required/>
                         </div>
+                        
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <input type="email" class="form-control" name="Email" id="email" placeholder="Email"
-                          />
+                          <input type="email" class="form-control" name="Email" id="email" placeholder="Email" required/>
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"/>
+                            <select class="form-control">
+                                <option selected>Asunto</option>
+                                <option value="ventas">Ventas por internet</option>
+                                <option value="fisicas">Tiendas fisicas</option>
+                            </select>
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+                          <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message" required></textarea>
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <input type="submit" value="Send Message" class="btn btn-primary"/>
+                          <input type="submit" value="Send Message" class="btn btn-primary" required/>
                           <div class="submitting"></div>
                         </div>
                       </div>
@@ -57,47 +61,47 @@
               </div>
               <div class="col-md-5 d-flex align-items-stretch">
                 <div class="info-wrap bg-primary w-100 p-lg-5 p-4">
-                  <h3 class="mb-4 mt-md-4">Contact us</h3>
+                  <h3 class="mb-4 mt-md-4">Contactanos</h3>
                   <div class="dbox w-100 d-flex align-items-start">
                     <div class="icon d-flex align-items-center justify-content-center">
-                      <span class="fa fa-map-marker"></span>
+                        <a routerLink="" class="text-white me-4"><img src="../../assets/About/house-door.svg" title="FB Login" style="width:40px ;" alt=""></a>
                     </div>
                     <div class="text pl-3">
                       <p>
-                        <span><b style="color:#F77E21 ;">Address:</b> </span> 198 West 21th Street, Suite 721
-                        New York NY 10016
+                        <span><b style="color:#F77E21 ;">Address </b> </span> Av. Universidad #940 
+                        Aguascalientes, México.
                       </p>
                     </div>
                   </div>
                   <div class="dbox w-100 d-flex align-items-center">
                     <div
                       class="icon d-flex align-items-center justify-content-center">
-                      <span class="fa fa-phone"></span>
+                      <a routerLink="" class="text-white me-4"><img src="../../assets/About/telephone-forward.svg" title="FB Login" style="width:40px ;" alt=""></a>
                     </div>
                     <div class="text pl-3">
                       <p>
-                        <span><b style="color:#F77E21 ;">Telefono</b></span>
+                        <span><b style="color:#F77E21 ;">Telefono </b></span>
                         <a href="tel://+524491294670"> +52 449 129 46 70</a>
                       </p>
                     </div>
                   </div>
                   <div class="dbox w-100 d-flex align-items-center">
                     <div class="icon d-flex align-items-center justify-content-center">
-                      <span class="fa fa-paper-plane"></span>
+                        <a routerLink="" class="text-white me-4"><img src="../../assets/About/envelope.svg" title="FB Login" style="width:40px ;" alt=""></a>
                     </div>
                     <div class="text pl-3">
                       <p>
-                        <span><b style="color:#F77E21 ;">Email:</b></span>
-                        <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+                        <span><b style="color:#F77E21 ;">Email </b></span>
+                        <a href="mailto:@yoursite.com">ventas@pepeferreteria.com</a>
                       </p>
                     </div>
                   </div>
                   <div class="dbox w-100 d-flex align-items-center">
                     <div class="icon d-flex align-items-center justify-content-center">
-                      <span class="fa fa-globe"></span>
+                        <a routerLink="" class="text-white me-4"><img src="../../assets/About/globe.svg" title="FB Login" style="width:40px ;" alt=""></a>
                     </div>
                     <div class="text pl-3">
-                      <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                      <p><span><b style="color: #f77E21;">Website </b></span> <a href="#">PepeFerreteria.com</a></p>
                     </div>
                   </div>
                 </div>
@@ -108,5 +112,6 @@
       </div>
     </div>
   </section>
+</div>
 
 </body>
