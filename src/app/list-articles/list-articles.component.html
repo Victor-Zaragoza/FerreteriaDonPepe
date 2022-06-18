@@ -22,10 +22,10 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let article of articles">
-                    <td>{{article.image}}</td>
+                    <td><img src="{{article.image}}" width="100px" height="100px"></td>
                     <td>{{article.name}}</td>
                     <td>{{article.description}}</td>
-                    <td>{{article.price}}</td>
+                    <td>${{article.price}}</td>
                     <td>{{article.total}}</td>
                     
  
@@ -40,4 +40,19 @@
               
         </div>
     </div>
+
+    <h1>Grafica Cantidad de productos</h1>
+      <canvas baseChart
+          
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [type]="'bar'"
+             >
+      </canvas>
+      <hr>
+      <button class="btn-primary" (click)="llenargrafica()">OBSERVAR GRAFICA</button>
+      <hr>
+      
 </div>

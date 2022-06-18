@@ -15,6 +15,7 @@
           <p class="heading-section">Si tienes alguna pregunta, déjanos tus datos o llámanos, nos pondremos en contacto contigo lo antes posible.</p>
         </div>
       </div>
+
       <div class="row justify-content-center">
         <div class="col-lg-10 col-md-12">
           <div class="wrapper">
@@ -22,41 +23,47 @@
               <div class="col-md-7 d-flex align-items-stretch">
                 <div class="contact-wrap w-100 p-lg-5 p-4">
                   <h3 class="mb-4">¡Escríbenos!</h3>
-                  <form id="contactForm" name="contactForm">
+                  
+                  <form id="contactForm" name="contactForm" [formGroup]="forma" (ngSubmit)="send(forma.value)">
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <input type="text" class="form-control" name="Nombre" placeholder="Nombre" formControlName="name" required/>
+                          <input type="text" class="form-control" name="Nombre" placeholder="Nombre"  formControlName="fullname"  required/>
                         </div>
-                        
                       </div>
+
                       <div class="col-md-6">
                         <div class="form-group">
-                          <input type="email" class="form-control" name="Email" id="email" placeholder="Email" required/>
+                          <input type="email" class="form-control" name="Email" id="email" placeholder="Email" formControlName="mail"  required/>
                         </div>
                       </div>
+
                       <div class="col-md-12">
                         <div class="form-group">
-                            <select class="form-control">
+                            <select class="form-control" formControlName="type">
                                 <option selected>Asunto</option>
                                 <option value="ventas">Ventas por internet</option>
                                 <option value="fisicas">Tiendas fisicas</option>
                             </select>
                         </div>
                       </div>
+
                       <div class="col-md-12">
                         <div class="form-group">
-                          <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message" required></textarea>
+                          <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message" formControlName="message" required></textarea>
                         </div>
                       </div>
+
                       <div class="col-md-12">
                         <div class="form-group">
-                          <input type="submit" value="Send Message" class="btn btn-primary" required/>
-                          <div class="submitting"></div>
+                          <button type="submit" value="Send Message" class="btn btn-primary" [disabled]="forma.invalid">
+                            Enviar
+                          </button>
                         </div>
                       </div>
                     </div>
                   </form>
+
                 </div>
               </div>
               <div class="col-md-5 d-flex align-items-stretch">

@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { usuario } from './usuarios';
 import { USUARIOS } from './Misusuarios';
@@ -37,3 +38,4 @@ export class SharedService {
     return this.firestore.collection('articles').doc(id).update(data);
   }
 }
+

@@ -1,5 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-about',
@@ -8,21 +10,26 @@ import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angula
 })
 export class AboutComponent implements OnInit {
 
-  resultado!:string;
-  contactForm = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(10)]),
-    mail: new FormControl('', [Validators.required, Validators.email]),
-    mensaje: new FormControl('', [Validators.required, Validators.maxLength(500)])
-  });
-  submit() {
-    if (this.contactForm.valid)
-      this.resultado = "Todos los datos son válidos";
-    else
-      this.resultado = "Hay datos inválidos en el formulario";
-  }
-  constructor() { }
+  forma!: FormGroup;
+
+  
+  constructor() {
+    this.forma = new FormGroup({
+      'fullname': new FormControl('', [Validators.required, Validators.minLength(3)]),
+      'type': new FormControl('', [Validators.required] ),
+      'mail': new FormControl('',[Validators.required,Validators.email]),
+      'message': new FormControl('',[Validators.required, Validators.minLength(5)])
+      });
+   }
 
   ngOnInit(): void {
   }
+
+  send(values:any){
+    console.log(values);
+    Swal.fire('Mensaje enviado.', '¡Muchas Gracias!', 'success');
+    this.forma.reset();
+   }
+
 
 }

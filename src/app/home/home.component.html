@@ -1,8 +1,9 @@
 <section class="vh-1000 gradient-custom">
+<br>
 <div class="banner">
-    <h1>Ferreteria Don Pepe</h1>
+    <h1 style="text-align:center ;">FERRETERIA FROOG</h1>
 </div>
-
+<hr>
 <div id="demo" class="carousel slide" data-ride="carousel">
 
     <!-- Indicators -->
@@ -34,213 +35,27 @@
     </a>
   </div>
 
- <!-- Gallery -->
- <div class="centrado">
- <div class="card-deck">
-    <div class="card" >
-      <img class="card-img-top mx-auto mx-auto"  src="./assets/aspiradora8galones.jpg"  alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Aspiradora 8 galones</h5>
-        <p class="card-text">Aspiradora de 8 galones.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+  <br>
+  <
+
+    <h5 style="margin-top: 30px;" *ngIf="articles.length == 0">No hay datos</h5> 
+    <div class="card-columns" *ngIf="articles.length > 0" >
+      
+      <div class="card" *ngFor="let article of articles">
+        <img class="card-img-top" src="{{article.image}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{article.name}}</h5>
+          <p class="card-text">{{article.description}}</p>
+        </div>
+        <div class="card-footer">
+          <b class="text-muted">${{article.price}}</b>
+          <br>
+          <button class="btn btn-outline-warning">Comprar</button>
+        </div>
       </div>
 
     </div>
-    <div class="card">
-      <img class="card-img-top mx-auto mx-auto" src="./assets/blister-con-4-candados-de-hierro.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Blister 4 candados de hierro</h5>
-        <p class="card-text">Blister de 4 candados de hiero para usarlo.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
 
-    </div>
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/bomba-periferica.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Bomba Periferica</h5>
-        <p class="card-text">Bomba periferica</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
 
-    </div>
-  </div>
-
-  <div class="card-deck">
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/bomba-presurizadora.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Bomba Presurizadora</h5>
-        <p class="card-text">Bomba para presurizacion</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/bomba-sumergible-plastica.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Bomba Sumergible Plastica</h5>
-        <p class="card-text">Bomba sumergible de polimero plastico</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/caja-herramienta-plastica.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Caja de Herramientas Plastica</h5>
-        <p class="card-text">Caja de polimero para herramientas </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="card-deck">
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/calentadores-de-paso-instantaneos.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Calentadores de Paso Instantaneos</h5>
-        <p class="card-text">Calentador de paso </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/Compresor de Aire 120v.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Compresor de Aire 120V</h5>
-        <p class="card-text">Compresor de Aire 120V </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/desbrozadora.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Desbrozadora</h5>
-        <p class="card-text">Desbrozadora</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="card-deck">
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/detector-de-humo-con-alarma.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Detector de Humo Con Alarma</h5>
-        <p class="card-text">Detector de humo con alarma pa que no te quemes</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/hidrolavadora1300.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Hidrolavadora 1300</h5>
-        <p class="card-text">Hidrolavadora 1300</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/juego-de-109-herramientas.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Juego de 109 Herramientas</h5>
-        <p class="card-text">Juego de 109 herramientas </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="card-deck">
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/juego-de-8-desarmadores.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Juego de 8 Desarmadores</h5>
-        <p class="card-text">Juego de 8 Desarmadores</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/lampara-de-emergencia-200.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Lampara de Emergencia</h5>
-        <p class="card-text">Lampara de Emergencia</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/linterna-recargable.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Linterna Recargable</h5>
-        <p class="card-text">Linterna Recargable</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-  </div>
-  
-  </div>
-  <div class="card-deck">
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/parrillas-de-gas-de-sobreponer.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Parrilas de Gas de Sobreponer</h5>
-        <p class="card-text">Parillas de gas de Sobreponer</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/pistola-para-pintar-electrica.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Pistola para Pintar Electrica</h5>
-        <p class="card-text">Pistola para pintar electrica</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/remachadora-neumatica.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Remachadora Neumatica</h5>
-        <p class="card-text">Remachadora de neumaticos</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-  </div>
-  <div class="card-deck">
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/rotomartillo.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Rotomartillo</h5>
-        <p class="card-text">Rotomartillo </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/sierra-circular.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Sierra Circular</h5>
-        <p class="card-text">Sierra en forma circular</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-    <div class="card">
-      <img class="card-img-top mx-auto" src="./assets/bomba-periferica.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Bomba Periferica</h5>
-        <p class="card-text">Bomba de ladito</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-
-    </div>
-  </div>
-  </div>
+ 
 </section>
