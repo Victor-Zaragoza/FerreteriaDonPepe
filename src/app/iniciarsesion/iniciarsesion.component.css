@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-.divider:after,
-.divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background-color: #0C3AB7;
-}
-.h-custom {
-height: calc(100% - 73px);
-}
-@media (max-width: 450px) {
-.h-custom {
-height: 100%;
-}
-}
-
-div #footer{
-background-color: #004a8d;
-}
-.gradient-custom {
-    /* fallback for old browsers */
-    background: #93c7fb;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to bottom right, rgb(193, 187, 221), rgb(87, 219, 245));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to bottom right, rgb(197, 190, 224), rgb(87, 219, 245,1))
-    }
-
-=======
 .divider:after,
 .divider:before {
 content: "";
@@ -161,4 +129,3 @@ background-color: #004a8d;
             padding: 170px 0px;
         }
     }
->>>>>>> origin/aram

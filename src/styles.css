@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 /* You can add global styles to this file, and also import other style files */
 @import '~ngx-toastr/toastr';
-body{
-    background-color:ghostwhite;
-}
- 
-=======
-/* You can add global styles to this file, and also import other style files */
-*{
+*
+{
     padding:0;
     margin:0;    
 }
@@ -19,4 +13,3 @@ body{
     --primary-color:#004a8d;
     --secondary-color:#F77E21;    
 }
->>>>>>> origin/aram
