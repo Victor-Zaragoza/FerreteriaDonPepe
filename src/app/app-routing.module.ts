@@ -8,9 +8,15 @@ import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component'
 import { ProductosComponent } from './productos/productos.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
+import { ListArticlesComponent } from './list-articles/list-articles.component';
+import { CreateArticleComponent } from './create-article/create-article.component';
+
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
+  {path: 'list', component: ListArticlesComponent},
+  {path: 'create', component: CreateArticleComponent},
+  {path: 'update/:id', component: CreateArticleComponent},
   {path: 'about', component: AboutComponent},
   {path: 'iniciarsesion', component: IniciarsesionComponent},
   {path: 'generarQR', component: GenerarQRComponent},
