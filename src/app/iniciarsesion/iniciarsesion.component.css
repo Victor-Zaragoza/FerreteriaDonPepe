@@ -38,9 +38,6 @@ background-color: #004a8d;
           align-self: start;
           height: 100vh;
         }
-        .divxd{
-            padding: 101px 0px;
-        }
     }
     
     @media only screen and (min-width: 321px) and (max-width: 640px){
@@ -73,9 +70,6 @@ background-color: #004a8d;
         .imgdx{
             padding: 15px 160px;
         }
-        .pxd{            
-            padding: 0px 50px;
-        }
     }
     @media only screen and (min-width: 961px) and (max-width: 1280px){
         .card-columns {
@@ -90,9 +84,7 @@ background-color: #004a8d;
         .imgdx{            
             padding: 0px 130px;
         }
-        .pxd{            
-            padding: 0px 60px;
-        }
+
     }
     @media only screen and (min-width: 1281px) and (max-width: 1600px){
         .card-columns {
@@ -108,9 +100,6 @@ background-color: #004a8d;
             top:110%;
             padding: 190px 0px;
         }
-        .pxd{            
-            padding: 0px 70px;
-        }
     }
     @media only screen and (min-width: 1601px){
         .card-columns {
@@ -123,14 +112,7 @@ background-color: #004a8d;
             height: 90vh;        
         }
         .divxd{
-            padding: 120px 0px;
-        }
-        p{
-            font-size: 22px;
-            padding: 3px 20px;
-        }
-        .pxd{            
-            padding: 0px 100px;
+            padding: 110px 0px;
         }
     }
     @media only screen and (min-width: 1602px) and (max-width: 1920px){
@@ -144,12 +126,6 @@ background-color: #004a8d;
             height: 90vh;      
         }
         .divxd{
-            padding: 170px 90px;
-        }
-        p{
-            font-size: 32px;
-        }
-        label{
-            font-size: 22px;
+            padding: 170px 0px;
         }
     }
