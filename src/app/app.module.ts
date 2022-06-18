@@ -40,15 +40,12 @@ import { AboutComponent } from './about/about.component';
     IniciarsesionComponent,
     RegisterComponent,
     ProductosComponent,
-<<<<<<< HEAD
     AnswerandquestionComponent,
-    AboutComponent
-=======
+    AboutComponent,
 
     CreateArticleComponent,
     ListArticlesComponent
 
->>>>>>> main
   ],
   imports: [
     BrowserModule,
