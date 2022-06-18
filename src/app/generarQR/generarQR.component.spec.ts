@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+
 import { GenerarQRComponent } from './generarQR.component';
 
 describe('GenerarQRComponent', () => {
