@@ -1,0 +1,43 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <span class="h3">
+                Lista de articles
+            </span>
+            <button class="btn btn-dark btn-lg" style="float: right;" routerLink="/create">ADD</button>
+            <!-- <button (click)="logout()" class="btn btn-info btn-block m-2" routerLink="/login">
+              Logout
+            </button> -->
+            <h5 style="margin-top: 30px;" *ngIf="articles.length == 0">No hay datos</h5>
+            <table *ngIf="articles.length > 0" class="table table-striped mt-5">
+                <thead>
+                  <tr>
+                    <th>IMAGEN</th>
+                    <th>NOMBRE</th>
+                    <th>DESCRIPCION</th>
+                    <th>PRECIO</th>
+                    <th>CANTIDAD</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let article of articles">
+                    <td>{{article.image}}</td>
+                    <td>{{article.name}}</td>
+                    <td>{{article.description}}</td>
+                    <td>{{article.price}}</td>
+                    <td>{{article.total}}</td>
+                    
+ 
+                    <td>
+                    <i class="fas fa-edit fa-lg text-info" style="margin-right: 5px;" [routerLink]="['/update/', article.id]"></i>
+                    <i (click)="deleteArticle(article.id)" class="fas fa-trash-alt fa-lg text-danger"></i>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              
+        </div>
+    </div>
+</div>
