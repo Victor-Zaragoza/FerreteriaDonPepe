@@ -29,6 +29,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { NgChartsModule } from 'ng2-charts';
 import { AnswerandquestionComponent } from './answerandquestion/answerandquestion.component';
 import { AboutComponent } from './about/about.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { AboutComponent } from './about/about.component';
     provideRemoteConfig(() => getRemoteConfig()),
     provideStorage(() => getStorage()),
     ReactiveFormsModule,
+    HttpClientModule
    
   ],
   providers: [],
