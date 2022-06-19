@@ -16,12 +16,12 @@ export class RegisterComponent implements OnInit {
     uid:'',
     email:'',
     passwordd: '',
-    passwordd2: '',
     nombrerefe:'',
     usuarioubi:''
   }
   
   uid='';
+  pass2:any;
 
   constructor(private forma:FormBuilder,private _sharedService: SharedService, private router:Router,private toastr: ToastrService,private aRoute: ActivatedRoute) { 
     this._sharedService.stateAuth().subscribe(res=>{
@@ -38,14 +38,16 @@ export class RegisterComponent implements OnInit {
   }
 
   async registrarse(){
+    
     console.log(this.cliente.passwordd);
-    console.log(this.cliente.passwordd2);
-    if(this.cliente.passwordd==this.cliente.passwordd2){
+    
+    if(this.cliente.passwordd==this.pass2){
       console.log("entra");
         const credenciales={
         email: this.cliente.email,
         password:this.cliente.passwordd
       };
+      console.log(credenciales);
       const res = await this._sharedService.register(credenciales.email,credenciales.password).catch(err=>{
         console.log(' error -> ', err);
       })
@@ -59,7 +61,7 @@ export class RegisterComponent implements OnInit {
     else{
       console.log("no");
       this.cliente.passwordd="";
-      this.cliente.passwordd2="";
+      this.pass2="";
       this.toastr.error('Las contraseñas deben coincidir','Las contraseñas deben coincidir',{positionClass:'toast-bottom-right'});
       
     }
