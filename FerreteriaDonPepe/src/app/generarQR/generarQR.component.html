@@ -8,10 +8,8 @@
     </div>
     <div>
     <label role="text">
-      <br>
-      Aqui ponen lo que vayamos a hacer con el QR <br /> 
-      <br>
-      <input role="form" [(ngModel)]="values" placeholder="Nombre" />
+      
+      <input role="form" [(ngModel)]="values"  readonly/>
     
     </label>
     </div>
@@ -19,7 +17,7 @@
     <br />
     
     <strong></strong>
-    <button role="button" type="button" class="btn btn-primary" (click)="qrData(this.myitem)">Generar</button>
+    <button role="button" type="button" class="btn btn-primary" (click)="qrData(this.aleatorio())">Generar</button>
     
     
     
