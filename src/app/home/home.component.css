@@ -33,6 +33,17 @@ img{
     width: 250px;
     align-items:center;
 }
+
+.card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  }
+
+/*
 @media only screen and (min-width: 321px) and (max-width: 640px){
     .card-columns {
         -moz-column-count: 2;
@@ -201,3 +212,4 @@ img{
         padding: 0px 2px;
     }
 }
+*/

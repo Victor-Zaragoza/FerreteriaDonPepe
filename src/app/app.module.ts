@@ -29,6 +29,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { NgChartsModule } from 'ng2-charts';
 import { AnswerandquestionComponent } from './answerandquestion/answerandquestion.component';
 import { AboutComponent } from './about/about.component';
+import { UsdPesosPipe } from '../pipes/usd-pesos.pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AboutComponent } from './about/about.component';
     AboutComponent,
     FooterComponent,
     CreateArticleComponent,
-    ListArticlesComponent
+    ListArticlesComponent,    
+    UsdPesosPipe
 
   ],
   imports: [

@@ -1,34 +1,33 @@
-<div class="container mt-4">
+<div class="container container-xxl mt-4">
     <div class="card">
-        <div class="card-body">
-            <span class="h3">
-                Lista de articles
-            </span>
-            <button class="btn btn-dark btn-lg" style="float: right;" routerLink="/create">ADD</button>
+        <div class="card-body container-fluid">           
+            <span class="h3 h4x">
+              Lista de articles              
+              <p class="h3 h4x">{{date | date:'short'}}</p>
+            </span>            
+            <button class="btn btn-primary btn-lg" style="float: right;" routerLink="/create">ADD</button>
             <!-- <button (click)="logout()" class="btn btn-info btn-block m-2" routerLink="/login">
               Logout
-            </button> -->
-            <h5 style="margin-top: 30px;" *ngIf="articles.length == 0">No hay datos</h5>
-            <table *ngIf="articles.length > 0" class="table table-striped mt-5">
-                <thead>
+            </button> -->            
+            <h5 style="margin-top: 30px;" *ngIf="articles.length == 0">No hay datos</h5>      
+            <table *ngIf="articles.length > 0" class="table table-dark table-striped mt-5">
+                <thead>            
                   <tr>
-                    <th>IMAGEN</th>
-                    <th>NOMBRE</th>
-                    <th>DESCRIPCION</th>
-                    <th>PRECIO</th>
-                    <th>CANTIDAD</th>
-                    <th></th>
+                    <th scope="col">IMAGEN</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">DESCRIPCION</th>
+                    <th scope="col">PRECIO</th>
+                    <th scope="col">CANTIDAD</th>                    
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let article of articles">
-                    <td>{{article.image}}</td>
+                    <td><img src="{{article.image}}" width="100px" height="100px"></td>
                     <td>{{article.name}}</td>
                     <td>{{article.description}}</td>
-                    <td>{{article.price}}</td>
-                    <td>{{article.total}}</td>
-                    
- 
+                    <td class="d-flex justify-content-center">{{article.price | currency}}</td>
+                    <td class="d-flex justify-content-center">{{article.price*0.047 | currency:'EUR'}}</td>
+                    <td style="padding-left:5%">{{article.total | number:'3.0-0'}}</td>
                     <td>
                     <i class="fas fa-edit fa-lg text-info" style="margin-right: 5px;" [routerLink]="['/update/', article.id]"></i>
                     <i (click)="deleteArticle(article.id)" class="fas fa-trash-alt fa-lg text-danger"></i>
@@ -41,7 +40,10 @@
         </div>
     </div>
 
-    <h1>Grafica Cantidad de productos</h1>
+    <div>
+      <div class="d-flex justify-content-center">
+        <h1>Grafica Cantidad de productos</h1>
+      </div>
       <canvas baseChart
           
               [datasets]="barChartData"
@@ -52,7 +54,10 @@
              >
       </canvas>
       <hr>
-      <button class="btn-primary" (click)="llenargrafica()">OBSERVAR GRAFICA</button>
+      <div class="h4x">
+        <button class="btn-primary" (click)="llenargrafica()">OBSERVAR GRAFICA</button>
+      </div>
       <hr>
+    </div>
       
 </div>

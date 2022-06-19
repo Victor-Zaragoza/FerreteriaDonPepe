@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { pipe } from 'rxjs';
 import { SharedService } from '../shared.service';
 // import { AngularFirestore } from '@angular/fire/compat/firestore';
 // import { Observable } from 'rxjs';
 @Component({
   selector: 'app-list-articles',
   templateUrl: './list-articles.component.html',
-  styleUrls: ['./list-articles.component.css']
+  styleUrls: ['./list-articles.component.css']  
 })
 export class ListArticlesComponent implements OnInit {
   articles:any[]=[];
   stringbarra:any[]=[];
   titulos:any[]=[];
-  constructor(private _sharedService: SharedService) { 
-   
+  public date = new Date();
+  constructor(private _sharedService: SharedService) {  
   }
  
 public barChartOptions = {
@@ -24,13 +25,13 @@ public barChartOptions = {
         text: 'Grafica Barra Dinamica',
       },
     },
-  };
-public barChartLabels = ['2000', '2001', '2002', '2003', '2004', '2005', '2006'];
-public barChartLegend = true;
-public barChartData = [
-    {data: [0, 0, 0, 0, 0, 0, 0], label: 'Series A'},
-    {data: [0, 0, 0, 0, 0, 0, 0], label: 'Series B'}
-  ];
+  };  
+  public barChartLabels = ['2000', '2001', '2002', '2003', '2004', '2005', '2006'];
+  public barChartLegend = true;
+  public barChartData = [
+      {data: [0, 0, 0, 0, 0, 0, 0], label: 'Series A'},
+      {data: [0, 0, 0, 0, 0, 0, 0], label: 'Series B'}
+    ];
 
   llenargrafica(){
     for(var i=0;i<this.articles.length;i++){
