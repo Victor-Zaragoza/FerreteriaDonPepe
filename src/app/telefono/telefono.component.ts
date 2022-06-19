@@ -13,6 +13,7 @@ export class TelefonoComponent implements OnInit {
     uid:'',
     email:'',
     passwordd: '',
+    passwordd2: '',
     nombrerefe:'',
     usuarioubi:''
   }

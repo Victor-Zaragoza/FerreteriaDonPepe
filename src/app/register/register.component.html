@@ -11,7 +11,7 @@
                     <div class="col-md-6 mb-4">
     
                       <div class="form-outline">
-                        <input type="text" id="firstName" class="form-control form-control-lg"   [(ngModel)]="cliente.nombrerefe"/>
+                        <input type="text" id="firstName" class="form-control form-control-lg"   [(ngModel)]="cliente.nombrerefe" required/>
                         <label class="form-label" for="Name">Nombre</label>
                       </div>
 
@@ -56,7 +56,7 @@
                     </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="tel" id="username" class="form-control form-control-lg" [(ngModel)]="cliente.usuarioubi"/>
+                        <input type="tel" id="username" class="form-control form-control-lg" [(ngModel)]="cliente.usuarioubi" required/>
                         <label class="form-label" for="username">Nombre de Usuario</label>
                       </div>
     
@@ -64,7 +64,7 @@
   
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="password" id="passw1" class="form-control form-control-lg"  [(ngModel)]="cliente.passwordd" />
+                        <input type="password" id="passw1" class="form-control form-control-lg"  [(ngModel)]="cliente.passwordd" required />
                         <label class="form-label" for="passw1">Contraseña</label>
                       </div>
     
@@ -72,15 +72,20 @@
   
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="password" id="passw2" class="form-control form-control-lg" />
-                        <label class="form-label" for="passw2">Re Ingresa tu contraseña</label>
+                        <input type="password" id="passw2" class="form-control form-control-lg" [(ngModel)]="cliente.passwordd2" required/>
+                        <label class="form-label" for="passw2">ReIngresa tu contraseña</label>
                       </div>
     
                     </div>
                   </div>
                   <div class="divxd">
+<<<<<<< HEAD
                       <button type="text" class="btn btn-secondary btn-lg" style="margin-right: 10px;"  routerLink="/home">BACK</button>
                       <button (click)="registrarse()" type="submit" class="btn btn-dark btn-lg" routerLink="/iniciarsesion">registro</button>
+=======
+                      <button type="text" class="btn btn-secondary btn-lg" style="margin-right: 10px;"  (click)="salir()">BACK</button>
+                      <button (click)="registrarse()" type="submit" class="btn btn-dark btn-lg" >registro</button>
+>>>>>>> d1a4344c0cd03f574d3cc0a2171e5cc0a2d7263c
                   </div>
                 
               </div>
