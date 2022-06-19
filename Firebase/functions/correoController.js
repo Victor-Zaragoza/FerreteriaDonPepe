@@ -24,7 +24,7 @@ const envioCorreo = (req = request, resp = response) => {
     const opciones = {
         from: 'storeF',
         subject: body.asunto,
-        to: "xjlopz10@gmail.com",
+        to: "victor.zaragoza111@gmail.com",
         text: body.mensaje
     };
     console.log(req);
