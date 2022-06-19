@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { __await } from 'tslib';
+import { Cliente } from '../models';
 import { SharedService } from '../shared.service';
 
 @Component({
@@ -15,6 +17,14 @@ export class RegisterComponent implements OnInit {
   id: string | null;
   title='Agregar Usuario';
 
+  cliente:Cliente={
+    uid:'',
+    email:'',
+    passwordd: '',
+    nombrerefe:'',
+    usuarioubi:''
+  }
+  uid='';
   constructor(private forma:FormBuilder,private _sharedService: SharedService, private router:Router,private toastr: ToastrService,private aRoute: ActivatedRoute) { 
     this.createUser=this.forma.group({
       nombre:['',Validators.required],
@@ -24,10 +34,15 @@ export class RegisterComponent implements OnInit {
     })
     this.id=this.aRoute.snapshot.paramMap.get('id');
     console.log(this.id)
+    this._sharedService.stateAuth().subscribe(res=>{
+      console.log(res);
+    });
   }
 
-  ngOnInit(): void {
+  async ngOnInit() {
     this.editUser();
+    const uid = await this._sharedService.getUid();
+    console.log(uid);
   }
   addEditUser(){
     this.submitted=true;
@@ -86,5 +101,31 @@ export class RegisterComponent implements OnInit {
     })
     this.router.navigate(['/list']);
   }
+  register(){
+    const credenciales={
+      email:this.cliente.email,
+      password:this.cliente.passwordd
+    };
+    this._sharedService.register(credenciales.email,credenciales.password);
+  }
+  Ingresar(){
+    
+    const credenciales={
+      email:this.cliente.email,
+      password:this.cliente.passwordd
+    };
+    this._sharedService.login(credenciales.email,credenciales.password).then(res=>{
+      console.log("se logeo: ",res);
+    })
+  }
+  logout(){
+    this._sharedService.logout();
 
+  }
+  getUserLogged(){
+    this._sharedService.getUserLogged().subscribe(res=>{
+      console.log(res?.email);
+    });
+
+  }
 }

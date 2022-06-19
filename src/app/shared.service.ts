@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class SharedService {
   private user:usuario[]=USUARIOS;
   constructor(private firestore: AngularFirestore,private afauth: AngularFireAuth) { 
-
+    this.getUid();
 
   }
   
@@ -53,8 +53,40 @@ export class SharedService {
     return this.firestore.collection('users').doc(id).update(data);
   }
 
+  async register(email: string, password:string){
+    try{
+      return await this.afauth.createUserWithEmailAndPassword(email,password);
 
+    }catch(err){
+      console.log("error en registro:  ",err);
+      return null;
+    }
+  }
+  async login(email: string, password:string){
+    try{
+      return await this.afauth.signInWithEmailAndPassword(email,password);
 
-
+    }catch(err){
+      console.log("error en login:  ",err);
+      return null;
+    }
+  }
+  logout(){
+    this.afauth.signOut();
+  }
+  async getUid(){
+    const user = await this.afauth.currentUser;
+    if(user === null){
+      return null;
+    }else{
+      return user.uid;
+    }
+  }
+  stateAuth(){
+    return this.afauth.authState
+  }
+  getUserLogged(){
+    return this.afauth.authState;
+  }
 }
 
