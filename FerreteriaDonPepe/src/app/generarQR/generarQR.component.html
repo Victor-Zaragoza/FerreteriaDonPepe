@@ -1,0 +1,28 @@
+<body>
+  <section class="divxd ftco-section vh-100 gradient-custom"> <!--METER LAS COSAS EN EL SECTION PARA EL BACKGROUND CHIDO--> 
+    <h2 role="text">Codigo QR</h2>
+    
+    <div>
+      <qr-code role="img" [value]="values" [size]="width" [level]="level"></qr-code> 
+      <br>
+    </div>
+    <div>
+    <label role="text">
+      <br>
+      Aqui ponen lo que vayamos a hacer con el QR <br /> 
+      <br>
+      <input role="form" [(ngModel)]="values" placeholder="Nombre" />
+    
+    </label>
+    </div>
+    <div>
+    <br />
+    
+    <strong></strong>
+    <button role="button" type="button" class="btn btn-primary" (click)="qrData(this.myitem)">Generar</button>
+    
+    
+    
+    </div>
+  </section>    
+</body>
