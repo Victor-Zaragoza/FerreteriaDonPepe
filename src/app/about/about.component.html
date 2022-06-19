@@ -29,13 +29,13 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <input type="text" class="form-control" name="Nombre" placeholder="Nombre"  formControlName="fullname"  required/>
+                          <input type="text" class="form-control" name="Nombre" placeholder="Nombre"  formControlName="fullname"  required id="name"/>
                         </div>
                       </div>
 
                       <div class="col-md-6">
                         <div class="form-group">
-                          <input type="email" class="form-control" name="Email" id="email" placeholder="Email" formControlName="mail"  required/>
+                          <input type="email" class="form-control" name="Email" id="email" placeholder="Email" formControlName="mail"  required id="email" />
                         </div>
                       </div>
 
@@ -51,13 +51,13 @@
 
                       <div class="col-md-12">
                         <div class="form-group">
-                          <textarea role="textbox "name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message" formControlName="message" required></textarea>
+                          <textarea role="textbox "name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message" formControlName="message" required id="mensaje" ></textarea>
                         </div>
                       </div>
 
                       <div class="col-md-12">
                         <div class="form-group">
-                          <button type="submit" value="Send Message" class="btn btn-primary" [disabled]="forma.invalid">
+                          <button type="submit"  (click)="enviarDatos()" value="Send Message" class="btn btn-primary" [disabled]="forma.invalid">
                             Enviar
                           </button>
                         </div>
