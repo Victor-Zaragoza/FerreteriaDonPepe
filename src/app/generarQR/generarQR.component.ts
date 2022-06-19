@@ -36,5 +36,10 @@ export class GenerarQRComponent implements OnInit {
   }
   ngOnInit(): void {
   }
+  aleatorio () {
+    this.myitem = this.item [Math.floor(Math.random() * this.item.length)]
+    this.qrInfo=this.myitem
+    return(this.qrInfo) 
+  }
 
 }

@@ -11,9 +11,9 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8 mb-5">
-          <h2 class="heading-section"><b style="color: #F77E21;">➤ </b>Contacto</h2>
-          <h4 class="heading-section">Herramientas, para las mejores personas.</h4>
-          <p class="heading-section">Si tienes alguna pregunta, déjanos tus datos o llámanos, nos pondremos en contacto contigo lo antes posible.</p>
+          <h2 class="heading-section" role="text" ><b style="color: #F77E21;">➤ </b>Contacto</h2>
+          <h4 class="heading-section" role="text" >Herramientas, para las mejores personas.</h4>
+          <p class="heading-section" role="text" >Si tienes alguna pregunta, déjanos tus datos o llámanos, nos pondremos en contacto contigo lo antes posible.</p>
         </div>
       </div>
 
@@ -41,7 +41,7 @@
 
                       <div class="col-md-12">
                         <div class="form-group">
-                            <select class="form-control" formControlName="type">
+                            <select class="form-control" formControlName="type" role="form" aria-label="Elige Una Opcion">
                                 <option selected>Asunto</option>
                                 <option value="ventas">Ventas por internet</option>
                                 <option value="fisicas">Tiendas fisicas</option>
@@ -51,7 +51,7 @@
 
                       <div class="col-md-12">
                         <div class="form-group">
-                          <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message" formControlName="message" required></textarea>
+                          <textarea role="textbox "name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message" formControlName="message" required></textarea>
                         </div>
                       </div>
 
