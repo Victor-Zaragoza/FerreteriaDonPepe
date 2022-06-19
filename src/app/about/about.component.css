@@ -259,6 +259,7 @@ select.form-control:focus::-ms-value {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+
 }
 
 .row {
@@ -270,6 +271,7 @@ select.form-control:focus::-ms-value {
   padding: 0em 0;
   margin-right: -15px;
   margin-left: -15px;
+  
 }
 
 .heading-section {
@@ -343,7 +345,7 @@ body {
       }
       body{
         align-self: start;
-        height: 162vh;
+        height: 100%;
       }
   }
   
@@ -355,7 +357,7 @@ body {
       }
       body{
         align-self: start;
-        height: 162vh;
+        height: 100%;
       }
   }
   @media only screen and (min-width: 641px) and (max-width: 960px){
@@ -366,7 +368,7 @@ body {
       }
       body{
           align-self: start;
-          height: 144vh;
+          height: 100%;
       }
   }
   @media only screen and (min-width: 961px) and (max-width: 1280px){
@@ -377,7 +379,7 @@ body {
       }
       body{  
           align-self: start;
-          height: 93vh;
+          height: 100%;
       }
   }
   @media only screen and (min-width: 1281px) and (max-width: 1600px){
@@ -388,7 +390,7 @@ body {
       }
       body{
           align-self: start;
-          height: 94vh;        
+          height: 100%;        
       }
       .divxd{
         padding: 100px 350px;
@@ -402,7 +404,7 @@ body {
       }
       body{
           align-self: start;
-          height: 94vh;        
+          height: 100%;        
       }
   }
   @media only screen and (min-width: 1602px) and (max-width: 1920px){
@@ -411,8 +413,9 @@ body {
         -webkit-column-count: 5;
         column-count: 5;
     }
+    
     body{
         align-self: start;
-        height: 85vh;      
+        height: 100%;      
     }
 }
