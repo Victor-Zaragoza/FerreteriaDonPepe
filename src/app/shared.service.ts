@@ -22,6 +22,8 @@ export class SharedService {
   settam(tam:number,posicion:number){
     this.user[posicion].tam=tam;
   }
+
+  //CRUD
   addArticle(article: any):Promise<any>{
     return this.firestore.collection('articles').add(article);
   }
@@ -37,5 +39,22 @@ export class SharedService {
   updateArticle(id:string, data:any):Promise<any>{
     return this.firestore.collection('articles').doc(id).update(data);
   }
+  //USUARIOS
+  addUser(article: any):Promise<any>{
+    return this.firestore.collection('users').add(article);
+  }
+  deleteUser(id:string):Promise<any>{
+    return this.firestore.collection('users').doc(id).delete();
+  }
+  getUser(id: string): Observable<any>{
+    return this.firestore.collection('users').doc(id).snapshotChanges();
+  }
+  updateUser(id:string, data:any):Promise<any>{
+    return this.firestore.collection('users').doc(id).update(data);
+  }
+
+
+
+
 }
 
