@@ -5,14 +5,13 @@
             <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
               <div class="card-body p-4 p-md-5 divxd">
                 <h3 class="mb-4 pb-2 md-0 mb-md-2">Register</h3>
-                <span *ngIf="submitted && createUser.invalid" class="badge badge-danger" style="background-color: red;">OBLIGATORIO</span>
-                <form  [formGroup]="createUser" (ngSubmit)="addEditUser()">
+
     
                   <div class="row">
                     <div class="col-md-6 mb-4">
     
                       <div class="form-outline">
-                        <input type="text" id="firstName" class="form-control form-control-lg"  formControlName="nombre"  [(ngModel)]="cliente.nombrerefe"/>
+                        <input type="text" id="firstName" class="form-control form-control-lg"   [(ngModel)]="cliente.nombrerefe"/>
                         <label class="form-label" for="Name">Nombre</label>
                       </div>
 
@@ -50,14 +49,14 @@
                     <div class="col-md-6 mb-4">
     
                       <div class="form-outline">
-                        <input type="email" id="emailAddress" class="form-control form-control-lg"  formControlName="email"   [(ngModel)]="cliente.email" />
+                        <input type="email" id="emailAddress" class="form-control form-control-lg" [(ngModel)]="cliente.email" />
                         <label class="form-label" for="emailAddress">Email</label>
                       </div>
     
                     </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="tel" id="username" class="form-control form-control-lg"  formControlName="logname" [(ngModel)]="cliente.usuarioubi"/>
+                        <input type="tel" id="username" class="form-control form-control-lg" [(ngModel)]="cliente.usuarioubi"/>
                         <label class="form-label" for="username">Nombre de Usuario</label>
                       </div>
     
@@ -65,7 +64,7 @@
   
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">
-                        <input type="password" id="passw1" class="form-control form-control-lg" formControlName="password"  [(ngModel)]="cliente.passwordd" />
+                        <input type="password" id="passw1" class="form-control form-control-lg"  [(ngModel)]="cliente.passwordd" />
                         <label class="form-label" for="passw1">Contraseña</label>
                       </div>
     
@@ -80,10 +79,10 @@
                     </div>
                   </div>
                   <div class="divxd">
-                      <button type="text" class="btn btn-secondary btn-lg" style="margin-right: 10px;" routerLink="/list-articles">BACK</button>
-                      <button (click)="register()" type="submit" class="btn btn-dark btn-lg">registro</button>
+                      <button type="text" class="btn btn-secondary btn-lg" style="margin-right: 10px;"  (click)="salir()">BACK</button>
+                      <button (click)="registrarse()" type="submit" class="btn btn-dark btn-lg" routerLink="/home">registro</button>
                   </div>
-                </form>
+                
               </div>
             </div>
           </div>

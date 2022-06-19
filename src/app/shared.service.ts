@@ -12,8 +12,8 @@ import { Observable } from 'rxjs';
 export class SharedService {
   private user:usuario[]=USUARIOS;
   constructor(private firestore: AngularFirestore,private afauth: AngularFireAuth) { 
-    this.getUid();
 
+    this.getAuthUid();
   }
   
   getuser():usuario[]{
@@ -40,42 +40,49 @@ export class SharedService {
     return this.firestore.collection('articles').doc(id).update(data);
   }
   //USUARIOS
-  addUser(article: any):Promise<any>{
-    return this.firestore.collection('users').add(article);
-  }
-  deleteUser(id:string):Promise<any>{
-    return this.firestore.collection('users').doc(id).delete();
-  }
-  getUser(id: string): Observable<any>{
-    return this.firestore.collection('users').doc(id).snapshotChanges();
-  }
-  updateUser(id:string, data:any):Promise<any>{
-    return this.firestore.collection('users').doc(id).update(data);
+  createDoc(data:any,path:string,id:any){
+    const collection = this.firestore.collection(path);
+    return collection.doc(id).set(data);
   }
 
-  async register(email: string, password:string){
-    try{
-      return await this.afauth.createUserWithEmailAndPassword(email,password);
-
-    }catch(err){
-      console.log("error en registro:  ",err);
-      return null;
-    }
+  getDoc<tipo>(path:string,id:string){
+    const collection = this.firestore.collection<tipo>(path);
+    return collection.doc(id).valueChanges;
   }
-  async login(email: string, password:string){
-    try{
-      return await this.afauth.signInWithEmailAndPassword(email,password);
 
-    }catch(err){
-      console.log("error en login:  ",err);
-      return null;
-    }
+  deleteDoc(path:string,id:string){
+    const collection = this.firestore.collection(path);
+    return collection.doc(id).delete;
   }
+
+  updateDoc(data:any,path:string,id:string){
+    const collection = this.firestore.collection(path);
+    return collection.doc(id).update(data);
+  }
+
+  getUid(){
+    return this.firestore.createId();
+  }
+
+  getCollection<tipo>(path:string){
+    const collection = this.firestore.collection<tipo>(path);
+    return collection.valueChanges;
+  }
+  
+  //AUTENTICACION
+  register(email: string, password:string){
+      return this.afauth.createUserWithEmailAndPassword(email,password);
+  }
+  login(email: string, password:string){
+    return this.afauth.signInWithEmailAndPassword(email,password);
+}
   logout(){
-    this.afauth.signOut();
+    return this.afauth.signOut();
   }
-  async getUid(){
+
+  async getAuthUid(){
     const user = await this.afauth.currentUser;
+    
     if(user === null){
       return null;
     }else{
@@ -83,10 +90,8 @@ export class SharedService {
     }
   }
   stateAuth(){
-    return this.afauth.authState
-  }
-  getUserLogged(){
     return this.afauth.authState;
   }
+
 }
 
