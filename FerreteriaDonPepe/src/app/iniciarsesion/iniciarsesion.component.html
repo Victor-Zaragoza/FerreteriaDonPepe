@@ -28,20 +28,20 @@
               <!-- Email input -->
               <div class="form-outline mb-4" role="form" aria-label="Email">
                 <input type="email" id="form3Example3" class="form-control form-control-lg"
-                  placeholder="Ingresa Un correo valido" />
+                  placeholder="Ingresa Un correo valido" [(ngModel)]="usuario.email"/>
                 <label class="form-label" for="form3Example3" role="" aria-label="Email">Direccion de Email</label>
               </div>
     
               <!-- Password input -->
               <div class="form-outline mb-3" role="form" aria-label="Contraseña">
                 <input type="password" id="form3Example4" class="form-control form-control-lg"
-                  placeholder="Ingresa tu Contraseña"  />
+                  placeholder="Ingresa tu Contraseña"  [(ngModel)]="usuario.password"/>
                 <label role="" aria-label="" class="form-label" for="form3Example4">Contraseña</label>
               </div>
                                 
               <div class="text-center text-lg-start mt-4 pt-2">
                 <button type="button" class="btn btn-primary btn-lg"
-                  style="padding-left: 2.5rem; padding-right: 2.5rem;" role="Button">Login</button>
+                  style="padding-left: 2.5rem; padding-right: 2.5rem;" role="Button" routerLink="/productos" (click)="opc()">Login</button>
                 <p class="small fw-bold mt-2 pt-1 mb-0">No tienes una cuenta? <a   class="nav-link" routerLink="/register"
                     class="link-danger">Registrate</a></p>
               </div>

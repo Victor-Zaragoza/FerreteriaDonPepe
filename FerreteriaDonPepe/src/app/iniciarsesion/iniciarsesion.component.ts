@@ -11,7 +11,10 @@ import{usuario} from '../usuarios'
 })
 
 export class IniciarsesionComponent implements OnInit {
-
+  usuario={
+    email: '',
+    password: ''
+  }
 
 
   misusers:usuario[]=[];
@@ -25,6 +28,40 @@ export class IniciarsesionComponent implements OnInit {
   ngOnInit(): void {
     this.misusers=this.miservicio.getuser();
   }
+  Ingresar(){
+    
+    const {email,password} = this.usuario;
+    this.miservicio.login(email,password).then(res=>{
+      console.log("se logeo: ",res);
+      
+    })
+  }
+   async opc(){
+    const uid = await this.miservicio.getAuthUid();
+    console.log(uid);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   public Login(nombrerec:string,passwordrec:string){
     localStorage.setItem("userval",nombrerec);

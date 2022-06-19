@@ -1,5 +1,5 @@
 export interface Cliente{
-    uid:string;
+    uid:string | null;
     email:string;
     passwordd: string;
     nombrerefe:string;

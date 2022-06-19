@@ -37,7 +37,7 @@ export class AboutComponent implements OnInit {
       mensaje: this.name + " " + this.email + " " + this.mensaje
     }
     console.log(params);
-    this.httpClient.post('https://us-central1-ferreteria-c749b.cloudfunctions.net/app/envio',params).
+    this.httpClient.post('http://localhost:3000/envio',params).
     subscribe( data => {
       console.log(data);
       (<HTMLInputElement>document.getElementById('email')).value = "";
