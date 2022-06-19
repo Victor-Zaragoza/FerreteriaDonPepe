@@ -16,6 +16,7 @@ export class RegisterComponent implements OnInit {
     uid:'',
     email:'',
     passwordd: '',
+    passwordd2: '',
     nombrerefe:'',
     usuarioubi:''
   }
@@ -37,17 +38,32 @@ export class RegisterComponent implements OnInit {
   }
 
   async registrarse(){
-    const credenciales={
-      email: this.cliente.email,
-      password:this.cliente.passwordd
-    };
-    const res = await this._sharedService.register(credenciales.email,credenciales.password).catch(err=>{
-      console.log(' error -> ', err);
-    })
-    const uid = await this._sharedService.getAuthUid();
-    
-    this.cliente.uid= uid;
-    this.guardarUser();
+    console.log(this.cliente.passwordd);
+    console.log(this.cliente.passwordd2);
+    if(this.cliente.passwordd==this.cliente.passwordd2){
+      console.log("entra");
+        const credenciales={
+        email: this.cliente.email,
+        password:this.cliente.passwordd
+      };
+      const res = await this._sharedService.register(credenciales.email,credenciales.password).catch(err=>{
+        console.log(' error -> ', err);
+      })
+      const uid = await this._sharedService.getAuthUid();
+      
+      this.cliente.uid= uid;
+      this.guardarUser();
+      this.toastr.success('Registro Exitoso','Registro Exitoso',{positionClass:'toast-bottom-right'});
+      this.router.navigate(['/home']);
+    }
+    else{
+      console.log("no");
+      this.cliente.passwordd="";
+      this.cliente.passwordd2="";
+      this.toastr.error('Las contraseñas deben coincidir','Las contraseñas deben coincidir',{positionClass:'toast-bottom-right'});
+      
+    }
+
   }
   async guardarUser(){
     const path = 'users';
