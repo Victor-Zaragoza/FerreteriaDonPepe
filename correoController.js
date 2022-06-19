@@ -3,21 +3,7 @@ const nodeMailer = require('nodemailer');
 const { google } = require('googleapis');
 const OAuth2 = google.auth.OAuth2;
 
-/*const accountTransport = require('../accout_transport.json');
 
-const mail_rover = async (callback) => {
-    const oauth2Client = new OAuth2(
-        accountTransport.auth.clientID,
-        accountTransport.auth.clientSecret,
-        "https://developers.google.com/oauthplayground"
-    );
-    oauth2Client.getAccessToken((err,token) =>{
-        if (err)
-            return console.log(err);
-        accountTransport.auth.accessToken = token;
-        callback(nodemailer.createTransport(accountTransport));
-    })
-}*/
 
 const envioCorreo = (req = request, resp = response) => {
     let body = req.body;
