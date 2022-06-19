@@ -1,9 +1,15 @@
 const functions = require("firebase-functions");
 const express=require ('express');
 //const admin= require ('firebase-admin')
-
+let cors = require('cors');
+const bodyparser = require('body-parser');
 
 const app=express();
+app.use(cors());
+app.use(bodyparser.json())
+app.use(bodyparser.urlencoded({extended:false}));
+
+let envio = require ('./correoController');
 
 
 
@@ -21,6 +27,9 @@ admin.initializeApp({
 
 
 const bd = admin.firestore();
+
+app.post('/envio',envio.envioCorreo);
+
 
 app.get('/hello-world',(req,res) => {
     return res.status(200).json({message: 'Hello World'})
