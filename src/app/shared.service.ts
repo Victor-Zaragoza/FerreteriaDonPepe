@@ -5,7 +5,15 @@ import { USUARIOS } from './Misusuarios';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Observable } from 'rxjs';
+import firebase from 'firebase/compat/app';
 
+declare global{
+  interface Window{
+    recaptchaVerifier:firebase.auth.RecaptchaVerifier;
+    confirmationResult:any;
+    grecaptcha:any;
+  }
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -73,8 +81,17 @@ export class SharedService {
   register(email: string, password:string){
       return this.afauth.createUserWithEmailAndPassword(email,password);
   }
-  login(email: string, password:string){
-    return this.afauth.signInWithEmailAndPassword(email,password);
+//   login(email: string, password:string){
+//     return this.afauth.signInWithEmailAndPassword(email,password);
+// }
+async login(email: string, password:string){
+  try{
+    return await this.afauth.signInWithEmailAndPassword(email,password);
+    
+  }catch(err){
+    console.log("error en login:  ",err);
+    return null;
+  }
 }
   logout(){
     return this.afauth.signOut();
@@ -91,6 +108,22 @@ export class SharedService {
   }
   stateAuth(){
     return this.afauth.authState;
+  }
+  //tele
+  mandarCodigo(numero:string, appVerified:any){
+    return this.afauth.signInWithPhoneNumber(numero,appVerified).then(confirmation=>{
+      window.confirmationResult=confirmation;
+      alert("LISTO");
+    }).catch(err=>{
+      console.log(err);
+    });
+
+  }
+  verificarCodigo(codigo:string){
+    return window.confirmationResult.confirm(codigo).then((result:any)=>{
+      let credenciales = firebase.auth.PhoneAuthProvider.credential(window.confirmationResult.verificationId,codigo);
+      this.afauth.signInWithCredential(credenciales);
+    })
   }
 
 }

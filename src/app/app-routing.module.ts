@@ -15,6 +15,7 @@ import { CreateArticleComponent } from './create-article/create-article.componen
 
 import { AnswerandquestionComponent } from './answerandquestion/answerandquestion.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TelefonoComponent } from './telefono/telefono.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'list', component: ListArticlesComponent},
   {path: 'create', component: CreateArticleComponent},
   {path: 'update/:id', component: CreateArticleComponent},
+  {path: 'telefono', component: TelefonoComponent},
   {path: 'about', component: AboutComponent},
   {path: 'iniciarsesion', component: IniciarsesionComponent},
   {path: 'generarQR', component: GenerarQRComponent},

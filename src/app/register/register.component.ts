@@ -57,7 +57,7 @@ export class RegisterComponent implements OnInit {
 
   }
   async salir(){
-    // this._sharedService.logout();
+    this._sharedService.logout();
     const uid = await this._sharedService.getAuthUid();
     console.log(uid);
   }
