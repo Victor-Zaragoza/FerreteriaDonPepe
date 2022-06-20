@@ -23,7 +23,7 @@
         <li class="nav-item" routerLinkActive="active" >
             <a class="nav-link " routerLink="/about" role=""  aria-label="ABOUT"> ABOUT </a>
         </li>
-        <li class="nav-item" routerLinkActive="active" >
+        <li class="nav-item" routerLinkActive="active"   *ngIf="userLogged|async as user">
             <a class="nav-link " routerLink="/productos" role="" aria-label="PRODUCTOS"> PRODUCTOS</a>    
         </li>
         <li class="nav-item" routerLinkActive="active" >
