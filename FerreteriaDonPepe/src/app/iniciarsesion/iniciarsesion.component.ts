@@ -3,7 +3,8 @@ import { timer } from 'rxjs';
 import swal from'sweetalert2';
 import { SharedService } from '../shared.service';
 import{usuario} from '../usuarios'
-
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-iniciarsesion',
   templateUrl: './iniciarsesion.component.html',
@@ -11,37 +12,43 @@ import{usuario} from '../usuarios'
 })
 
 export class IniciarsesionComponent implements OnInit {
-  usuario={
-    email: '',
-    password: ''
-  }
+  
+    Pam1:any;
+    Pam2:any;
+    root:any;
 
 
-  misusers:usuario[]=[];
+ 
   check:any;
 
 
-  constructor(public miservicio:SharedService) {
+  constructor(public miservicio:SharedService,private router:Router,private toastr: ToastrService) {
 
   }
 
   ngOnInit(): void {
-    this.misusers=this.miservicio.getuser();
   }
-  Ingresar(){
+
+  async Ingresar(){
     
-    const {email,password} = this.usuario;
-    this.miservicio.login(email,password).then(res=>{
-      console.log("se logeo: ",res);
-      
+    const res = await this.miservicio.login(this.Pam1,this.Pam2).catch(err=>{
+      console.log(' error -> ', err);
+      this.toastr.error('Login Fallido');
+      this.router.navigate(['/login']);
     })
+
+    
   }
+
    async opc(){
     const uid = await this.miservicio.getAuthUid();
     console.log(uid);
   }
 
 
+  redirigir(){
+    this.router.navigate(['/telefono']);
+  }
 
 
 
@@ -62,7 +69,7 @@ export class IniciarsesionComponent implements OnInit {
 
 
 
-
+/*
   public Login(nombrerec:string,passwordrec:string){
     localStorage.setItem("userval",nombrerec);
     this.check=localStorage.getItem('usuarioLogin')
@@ -85,5 +92,6 @@ export class IniciarsesionComponent implements OnInit {
     localStorage.setItem('usuarioLogin', JSON.stringify(this.misusers));
     }
   }
+  */
 
 }

@@ -83,15 +83,9 @@ export class SharedService {
 //   login(email: string, password:string){
 //     return this.afauth.signInWithEmailAndPassword(email,password);
 // }
-async login(email: string, password:string){
-  try{
-    return await this.afauth.signInWithEmailAndPassword(email,password);
-    
-  }catch(err){
-    console.log("error en login:  ",err);
-    return null;
-  }
-}
+ login(email: string, password:string){
+      return this.afauth.signInWithEmailAndPassword(email,password)
+ }
   logout(){
     return this.afauth.signOut();
   }
@@ -125,5 +119,9 @@ async login(email: string, password:string){
     })
   }
 
+
+  getUserLogged(){
+    return this.afauth.authState;
+  }
 }
 
