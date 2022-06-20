@@ -16,12 +16,17 @@
             column-count: 1;
         }
         body{
-            align-self: start;
-            height: 170vh;
+          align-self: start;
+          height: 100vh;
+          position: relative;
+        }
+        .imgestat{
+            position: relative;
+            padding: 0% 5%;
         }
     }
     
-    @media only screen and (min-width: 321px) and (max-width: 640px){
+    @media only screen and (min-width: 321px) and (max-width: 483px)and (max-width: 640px){
         .card-columns {
             -moz-column-count: 2;
             -webkit-column-count: 2;
@@ -29,43 +34,26 @@
         }
         body{
             align-self: start;
-            height: 170vh;
+            height: 100%;
+            position: relative;
+            width: 100%;
+        }
+        .divxd{
+            padding: 2% 0%;
+        }
+        .formu{
+            position: relative;
+            top: 0%;            
+            bottom: 15%;
+            width: 96%;
+            padding: 7% 10%;            
+        }
+        .imgestat{
+            position: relative;
+            padding: 0% 99%;
         }
     }
-    @media only screen and (min-width: 641px) and (max-width: 960px){
-        .card-columns {
-            -moz-column-count: 2;
-            -webkit-column-count: 2;
-            column-count: 2;
-        }
-        body{
-            align-self: start;
-            height: 117vh;
-        }
-    }
-    @media only screen and (min-width: 961px) and (max-width: 1280px){
-        .card-columns {
-            -moz-column-count: 3;
-            -webkit-column-count: 3;
-            column-count: 3;
-        }
-        body{    
-            align-self: start;
-            height: 99vh;
-        }
-    }
-    @media only screen and (min-width: 1281px) and (max-width: 1600px){
-        .card-columns {
-            -moz-column-count: 4;
-            -webkit-column-count: 4;
-            column-count: 4;
-        }
-        body{
-            align-self: start;
-            height: 97vh;        
-        }
-    }
-    @media only screen and (min-width: 1601px){
+    @media only screen and (min-height: 0px ) and (max-height: 1080px) and (min-width:321px) and (max-width:1080px){
         .card-columns {
             -moz-column-count: 5;
             -webkit-column-count: 5;
@@ -73,7 +61,141 @@
         }
         body{
             align-self: start;
-            height: 91vh;        
+            height: 100%;
+            position: relative;
+            width: 100%;
+        }
+        .divxd{
+            padding: 10px 10px;
+        }        
+        .imgestat{
+            position: relative;
+            padding: 0% 19%;
+        } 
+        .formu{
+            position: absolute;
+            top: 0%;            
+            bottom: 15%;
+            width: 96%;
+            padding: 7% 10%;            
+        }
+    }
+    @media only screen and (min-width: 641px) and (max-width: 670px) and (max-width: 960px){
+        .card-columns {
+            -moz-column-count: 2;
+            -webkit-column-count: 2;
+            column-count: 2;
+        }
+        body{
+            align-self: start;
+            height: 100%;
+            position: relative;
+            width: 100%;
+        }
+        .divxd{
+            padding: 3% 0%;
+        }
+        .imgestat{
+            position: relative;
+            padding: 0% 12%;
+        }
+        .formu{
+            position: absolute;
+            top: 0%;            
+            bottom: 15%;
+            width: 96%;
+            padding: 7% 10%;            
+        }
+    }
+    @media only screen and (min-width: 961px) and (max-width: 991px) {
+        .card-columns {
+            -moz-column-count: 4;
+            -webkit-column-count: 4;
+            column-count: 4;
+        }
+        body{    
+            align-self: start;
+            height: 100%;
+            position: relative;                       
+        }
+        .imgestat{
+            position: relative;
+            padding: 0% 7%;
+        }
+        .divxd{
+            padding: 2% 0%;
+        }
+        .formu{
+            position: absolute;
+            top: 35%;            
+            bottom: 195%;
+            width: 100%;
+            padding: 1% 10%;
+        }
+    }
+    @media only screen and (min-width: 992px) and (max-width: 1280px){
+        .card-columns {
+            -moz-column-count: 4;
+            -webkit-column-count: 4;
+            column-count: 4;
+        }
+        body{    
+            align-self: start;
+            height: 100%;                    
+            position: relative;                       
+        }
+        .imgestat{
+            position: relative;
+            padding: 15% 3%;
+        }
+        .divxd{
+            padding: 2% 0%;
+        }
+        .formu{
+            position: relative;
+            top: 5%;            
+            bottom: 15%;
+            width: 100%;
+            padding: 1% 10%;
+        }
+    }
+    @media only screen and (min-width: 1281px) and (max-width: 1513px){
+        .card-columns {
+            -moz-column-count: 4;
+            -webkit-column-count: 4;
+            column-count: 4;
+        }
+        body{
+            align-self: start;
+            height: 100%;  
+            position: relative;      
+        }
+        .divxd{
+            top:110%;
+            padding: 2% 0%;
+        }
+        .imgestat{
+            position: relative;
+            padding: 19% 3%;
+        }
+    }
+    @media only screen and (min-width: 1514px) and (max-width: 1601px){
+        .card-columns {
+            -moz-column-count: 5;
+            -webkit-column-count: 5;
+            column-count: 5;
+        }
+        body{
+            align-self: start;
+            height: 100%;   
+            position: relative;     
+        }
+        .divxd{
+            padding: 110px 0px;
+        }
+        .imgestat{
+            position: relative;
+            padding: 15% 2%;
         }
     }
     @media only screen and (min-width: 1602px) and (max-width: 1920px){
@@ -84,10 +206,73 @@
         }
         body{
             align-self: start;
-            height: 
-            90vh;      
+            height: 100%;      
+            position: relative;
         }
         .divxd{
-            padding: 30px 10px;
+            padding: 10px 0px;
+        }
+        .imgestat{
+            position: relative;
+            padding: 5% 1%;
+        }
+    }
+
+    @media only screen and (max-width: 50%){
+        .card-columns {
+            -moz-column-count: 3;
+            -webkit-column-count: 3;
+            column-count: 3;
+        }
+        div{
+            position: relative;  
+            top: 50%;        
+            padding: 7% 10%;            
+        }
+        .formu{
+            position: relative;
+            top: 50%;            
+            bottom: 15%;
+            height: 50%;
+            width: 96%;
+            padding: 7% 10%;            
+        }
+        .divxd{
+            padding: 10px 0px;
+        }
+    }
+    @media only screen and (min-width: 25%) and (max-width: 200%){
+        .card-columns {
+            -moz-column-count: 4;
+            -webkit-column-count: 4;
+            column-count: 4;
+        }
+        body{    
+            align-self: start;
+            height: 100%;
+            bottom: 0;
+            position: relative;
+            
+        }
+        .imgestat{
+            position: relative;
+            padding: 0% 3%;
+        }
+        div{
+            position: relative;              
+            padding: 7% 10%;            
+        }
+        .divxd{
+            padding: 10px 0px;
+        }
+        .formu{
+            position: relative;            
+            bottom: 15%;
+            height: 50%;
+            width: 96%;
+            padding: 7% 10%;            
+        }
+        section{
+            height: 100%;
         }
     }
