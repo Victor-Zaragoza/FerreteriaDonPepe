@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +8,8 @@ import {Router} from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavBarComponent implements OnInit {
-
-  constructor(private router:Router) { }
+  userLogged=this.out.getUserLogged();
+  constructor(private router:Router,private out: SharedService) { }
 
   ngOnInit(): void {
   }
@@ -17,4 +18,10 @@ export class NavBarComponent implements OnInit {
   //   this.router.navigate(['/buscador',nombre]);
   // }
 
+
+  async salir(){
+    this.out.logout();
+    // const uid = await this.authService.getAuthUid();
+    // console.log(uid);
+  }
 }

@@ -119,5 +119,9 @@ export class SharedService {
     })
   }
 
+
+  getUserLogged(){
+    return this.afauth.authState;
+  }
 }
 
