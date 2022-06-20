@@ -11,13 +11,13 @@ import{usuario} from '../usuarios'
 })
 
 export class IniciarsesionComponent implements OnInit {
-  usuario={
-    email: '',
-    password: ''
-  }
+  
+    Pam1:any;
+    Pam2:any;
+  
 
 
-  misusers:usuario[]=[];
+ 
   check:any;
 
 
@@ -26,14 +26,12 @@ export class IniciarsesionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.misusers=this.miservicio.getuser();
   }
-  Ingresar(){
+
+  async Ingresar(){
     
-    const {email,password} = this.usuario;
-    this.miservicio.login(email,password).then(res=>{
-      console.log("se logeo: ",res);
-      
+    const res = await this.miservicio.login(this.Pam1,this.Pam2).catch(err=>{
+      console.log(' error -> ', err);
     })
   }
    async opc(){
@@ -62,7 +60,7 @@ export class IniciarsesionComponent implements OnInit {
 
 
 
-
+/*
   public Login(nombrerec:string,passwordrec:string){
     localStorage.setItem("userval",nombrerec);
     this.check=localStorage.getItem('usuarioLogin')
@@ -85,5 +83,6 @@ export class IniciarsesionComponent implements OnInit {
     localStorage.setItem('usuarioLogin', JSON.stringify(this.misusers));
     }
   }
+  */
 
 }

@@ -13,9 +13,29 @@ height: calc(100% - 73px);
 height: 100%;
 }
 }
-
+.imgestat{
+    position: relative;
+    padding: 0% 10%;
+}
+form{
+    position: sticky;
+    top: 100%;
+    bottom: 100%;
+    width: 100%;
+}
+body{
+    position: relative;
+    padding-bottom: 2% 0%;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+}
 div #footer{
 background-color: #004a8d;
+}
+.fortive{
+    position: relative;
+    padding-bottom: 2% 0% ;
 }
 .gradient-custom {
     /* fallback for old browsers */
@@ -37,6 +57,11 @@ background-color: #004a8d;
         body{
           align-self: start;
           height: 100vh;
+          position: relative;
+        }
+        .imgestat{
+            position: relative;
+            padding: 0% 5%;
         }
     }
     
@@ -53,8 +78,12 @@ background-color: #004a8d;
         .divxd{
             padding: 101px 0px;
         }
+        .imgestat{
+            position: relative;
+            padding: 10px 10%;
+        }
     }
-    @media only screen and (min-width: 641px) and (max-width: 960px){
+    @media only screen and (min-width: 641px) and (max-width: 670px) and (max-width: 960px){
         .card-columns {
             -moz-column-count: 2;
             -webkit-column-count: 2;
@@ -62,16 +91,28 @@ background-color: #004a8d;
         }
         body{
             align-self: start;
-            height: 100vh;
+            height: 110%;
+            /* position: relative; */
         }
         .divxd{
-            padding: 130px 100px;
+            padding: 100px 100px;
         }
         .imgdx{
-            padding: 15px 160px;
+            padding: 0% 35%;
+        }
+        .imgestat{
+            position: relative;
+            padding: 0% 3%;
+        }
+        .formu{
+            position: absolute;
+            top: 9%;            
+            bottom: 195%;
+            width: 100%;
+            padding: 1% 10%;
         }
     }
-    @media only screen and (min-width: 961px) and (max-width: 1280px){
+    @media only screen and (min-width: 961px) and (max-width: 1079px) {
         .card-columns {
             -moz-column-count: 4;
             -webkit-column-count: 4;
@@ -79,12 +120,55 @@ background-color: #004a8d;
         }
         body{    
             align-self: start;
-            height: 98vh;
+            height: 100%;
+            position: relative;                       
         }
         .imgdx{            
-            padding: 0px 130px;
+            padding: 0% 16%;
         }
-
+        .imgestat{
+            position: relative;
+            padding: 0% 3%;
+        }
+        .divxd{
+            padding: 2% 0%;
+        }
+        .formu{
+            position: absolute;
+            top: 35%;            
+            bottom: 195%;
+            width: 100%;
+            padding: 1% 10%;
+        }
+    }
+    @media only screen and (min-width: 1080px) and (max-width: 1280px){
+        .card-columns {
+            -moz-column-count: 4;
+            -webkit-column-count: 4;
+            column-count: 4;
+        }
+        body{    
+            align-self: start;
+            height: 100%;
+            position: relative;                       
+        }
+        .imgdx{            
+            padding: 0% 16%;
+        }
+        .imgestat{
+            position: relative;
+            padding: 0% 3%;
+        }
+        .divxd{
+            padding: 2% 0%;
+        }
+        .formu{
+            position: absolute;
+            top: 21%;            
+            bottom: 195%;
+            width: 100%;
+            padding: 1% 10%;
+        }
     }
     @media only screen and (min-width: 1281px) and (max-width: 1600px){
         .card-columns {
@@ -94,11 +178,16 @@ background-color: #004a8d;
         }
         body{
             align-self: start;
-            height: 92vh;        
+            height: 100%;  
+            position: relative;      
         }
         .divxd{
             top:110%;
             padding: 190px 0px;
+        }
+        .imgestat{
+            position: relative;
+            padding: 10% 2%;
         }
     }
     @media only screen and (min-width: 1601px){
@@ -109,10 +198,15 @@ background-color: #004a8d;
         }
         body{
             align-self: start;
-            height: 90vh;        
+            height: 100%;   
+            position: relative;     
         }
         .divxd{
             padding: 110px 0px;
+        }
+        .imgestat{
+            position: relative;
+            padding: 15% 2%;
         }
     }
     @media only screen and (min-width: 1602px) and (max-width: 1920px){
@@ -123,9 +217,34 @@ background-color: #004a8d;
         }
         body{
             align-self: start;
-            height: 90vh;      
+            height: 100%;      
+            position: relative;
         }
         .divxd{
             padding: 170px 0px;
+        }
+        .imgestat{
+            position: relative;
+            padding: 10% 1%;
+        }
+    }
+
+    @media only screen and (min-width: 75%) and (max-width: 1280px){
+        .card-columns {
+            -moz-column-count: 4;
+            -webkit-column-count: 4;
+            column-count: 4;
+        }
+        body{    
+            align-self: start;
+            height: 100%;
+            position: relative;
+        }
+        .imgdx{            
+            padding: 0px 130px;
+        }
+        .imgestat{
+            position: relative;
+            padding: 0% 3%;
         }
     }

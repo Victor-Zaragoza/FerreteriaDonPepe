@@ -11,6 +11,7 @@ export class ListArticlesComponent implements OnInit {
   articles:any[]=[];
   stringbarra:any[]=[];
   titulos:any[]=[];
+  public date = new Date();
   constructor(private _sharedService: SharedService) { 
    
   }
