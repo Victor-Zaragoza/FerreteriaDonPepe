@@ -12,13 +12,11 @@
             <form class="divxd">
               <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                 <p class="lead fw-normal mb-0 me-3">Inicia Sesion con</p>
-                <button type="button" class="btn btn-light btn-floating mx-1" role="button" aria-label="Google">
-                  <img src="/assets/googleicon.png" width="15px" height="15px">
+                <button type="button" (click)="redirigir()" class="btn btn-light btn-floating mx-1" role="button" aria-label="Google">
+                  <img src="/assets/telefonoicon.png" width="15px" height="15px">
                 </button>
     
-                <button type="button" class="btn btn-light btn-floating mx-1" role="button" aria-label="Facebook">
-                  <img src="/assets/fbicon.svg"  width="15px" height="15px">
-                </button>
+        
               </div>
     
               <div class="divider d-flex align-items-center my-4">
@@ -38,8 +36,9 @@
               </div>
                                 
               <div class="text-center text-lg-start mt-4 pt-2">
-                <button type="button" class="btn btn-primary btn-lg"
-                  style="padding-left: 2.5rem; padding-right: 2.5rem;" role="Button" routerLink="/productos" (click)="Ingresar()">Login</button>
+                
+                <button type="button" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;" role="Button" routerLink="/home" (click)="Ingresar()">Login</button>
+                
                 <p class="small fw-bold mt-2 pt-1 mb-0">No tienes una cuenta? <a   class="nav-link" routerLink="/register"
                     class="link-danger">Registrate</a></p>
               </div>

@@ -3,7 +3,8 @@ import { timer } from 'rxjs';
 import swal from'sweetalert2';
 import { SharedService } from '../shared.service';
 import{usuario} from '../usuarios'
-
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-iniciarsesion',
   templateUrl: './iniciarsesion.component.html',
@@ -14,14 +15,14 @@ export class IniciarsesionComponent implements OnInit {
   
     Pam1:any;
     Pam2:any;
-  
+    root:any;
 
 
  
   check:any;
 
 
-  constructor(public miservicio:SharedService) {
+  constructor(public miservicio:SharedService,private router:Router,private toastr: ToastrService) {
 
   }
 
@@ -32,14 +33,22 @@ export class IniciarsesionComponent implements OnInit {
     
     const res = await this.miservicio.login(this.Pam1,this.Pam2).catch(err=>{
       console.log(' error -> ', err);
+      this.toastr.error('Login Fallido');
+      this.router.navigate(['/login']);
     })
+
+    
   }
+
    async opc(){
     const uid = await this.miservicio.getAuthUid();
     console.log(uid);
   }
 
 
+  redirigir(){
+    this.router.navigate(['/telefono']);
+  }
 
 
 
