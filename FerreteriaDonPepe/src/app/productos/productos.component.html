@@ -1,2 +1,42 @@
-<section class="vh-100 gradient-custom"> <!--METER LAS COSAS EN EL SECTION PARA EL BACKGROUND CHIDO--> </section>
+<section class="vh-100 gradient-custom"> 
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-body">
+                <span class="h3">
+                    Lista de Articulos
+                </span>
+    
+                <h5 style="margin-top: 30px;" *ngIf="!productos.length" >No hay articulos en el carrito</h5>
+                <table  class="table table-striped mt-5" *ngIf="productos.length">
+                    <thead>
+                      <tr>
+                        <th>NOMBRE</th>
+                        <th>PRECIO</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let producto of productos">
+                      <tr>
+                        <td>{{producto.nombre}}</td>
+                        <td>{{producto.precio}}</td>
+                        
+                        <td>
+                        
+                        <i class="fas fa-trash-alt fa-lg text-danger" (click)="deleteProducto(producto.nombre)"></i>
+                        </td>
+                      </tr>
+                      
+                    </tbody>
+                    <br><br>
+                    <tr>
+                    <td  colspan="2" style="text-align:center;">
+                    <button class="btn btn-block btn-outline-warning"  colspan (click)="comprar()">Comprar</button></td></tr>
+                  </table>
+                  
+            </div>
+        </div>
+          
+    </div>    
+
+</section>
 

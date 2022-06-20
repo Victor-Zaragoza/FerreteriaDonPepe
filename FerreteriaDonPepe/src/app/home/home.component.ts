@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Home} from './home.model';
 import { SharedService } from '../shared.service';
+import { ToastrService } from 'ngx-toastr';
+import { map } from '@firebase/util';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,8 +11,9 @@ import { SharedService } from '../shared.service';
 })
 export class HomeComponent implements OnInit {
   articles:any[]=[];
+  productos:any[]=[];
  
-  constructor(private _sharedService: SharedService) { 
+  constructor(private _sharedService: SharedService, private toastr: ToastrService) { 
    
   }
 
@@ -29,6 +33,16 @@ export class HomeComponent implements OnInit {
       });
       console.log(this.articles);
     });
+  }
+  agregarCarrito(nombre:any, precio:any){
+    let agregar={
+      nombre: nombre,
+      precio: precio
+
+    };
+    this.productos.push(agregar);
+    localStorage.setItem('productos',JSON.stringify(this.productos)); 
+    this.toastr.success('Producto añadido al carrito','producto añadido al carrito',{positionClass:'toast-bottom-right'});
   }
 
 }
