@@ -1,0 +1,95 @@
+<section class="vh-100 gradient-custom divxd">
+    <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+              <div class="card shadow-2-strong card-registration divxd" style="border-radius: 15px;">
+                <div class="card-body p-4  divxd">
+                  <h3 class=" pb-2 md-0 ">Register</h3>
+  
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+      
+                        <div class="form-outline">
+                          <input type="text" id="firstName" class="form-control form-control-lg" [(ngModel)]="cliente.nombrerefe"/>
+                          <label class="form-label" for="Name">Nombre</label>
+                        </div>
+  
+                      </div>
+                    </div>
+      
+                    <div class="row">
+                      
+                      <div class="col-md-6 mb-2">
+      
+                        <h6 class="mb-2 ">Sexo: </h6>
+      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                            value="option1" checked />
+                          <label class="form-check-label" for="femaleGender">Femenino</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                            value="option2" />
+                          <label class="form-check-label" for="maleGender">Masculino</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                            value="option3" />
+                          <label class="form-check-label" for="otherGender">Otro</label>
+                        </div>
+      
+                      </div>
+                    </div>
+      
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+      
+                        <div class="form-outline">
+                          <input #telefono type="text" id="emailAddress" class="form-control form-control-lg" [(ngModel)]="cliente.email"/>
+                          <label class="form-label" for="emailAddress">Telefono</label>
+                        </div>
+      
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="tel" id="username" class="form-control form-control-lg" [(ngModel)]="cliente.usuarioubi"/>
+                          <label class="form-label" for="username">Nombre de Usuario</label>
+                        </div>
+                        
+                      </div>
+                      
+                      <div class="col-md-6 divxd">
+                        <div class="form-outline">
+                          <input type="password" id="passw1" class="form-control form-control-lg"  [(ngModel)]="cliente.passwordd" required />
+                          <label class="form-label" for="passw1">Contraseña</label>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input #codigo type="text" id="passw2" class="form-control form-control-lg" />
+                          <label class="form-label" for="passw2" >verificar codigo</label>
+                        </div>
+                        
+                      </div>
+                      <div id="recaptcha-container"></div>
+                    </div>
+                    <div class="divxd">
+                        <button type="text" class="btn btn-secondary btn-lg" style="margin-right: 10px;"  routerLink="/home">BACK</button>
+                        <button (click)="mandarCodigo(telefono.value)" type="submit" class="btn btn-dark btn-lg">mandar codigo</button>
+                    </div>
+                    <div class="divxd">
+                        <button (click)="verificarCodigo(codigo.value)" (click)="registrarse()"  type="submit" class="btn btn-dark btn-lg" routerLink="/iniciarsesion">verificar codigo</button>
+                    </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  
+  </section> 

@@ -11,9 +11,9 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8 mb-5">
-          <h2 class="heading-section"><b style="color: #F77E21;">➤ </b>Contacto</h2>
-          <h4 class="heading-section">Herramientas, para las mejores personas.</h4>
-          <p class="heading-section">Si tienes alguna pregunta, déjanos tus datos o llámanos, nos pondremos en contacto contigo lo antes posible.</p>
+          <h2 class="heading-section" role="text" ><b style="color: #F77E21;">➤ </b>{{'Contacto'|uppercase}}</h2>
+          <h4 class="heading-section" role="text" >{{'Herramientas, para las mejores personas.'|uppercase}}</h4>
+          <p class="heading-section" role="text" >Si tienes alguna pregunta, déjanos tus datos o llámanos, nos pondremos en contacto contigo lo antes posible.</p>
         </div>
       </div>
 
@@ -29,19 +29,19 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <input type="text" class="form-control" name="Nombre" placeholder="Nombre"  formControlName="fullname"  required/>
+                          <input type="text" class="form-control" name="Nombre" placeholder="Nombre"  formControlName="fullname"  required id="name"/>
                         </div>
                       </div>
 
                       <div class="col-md-6">
                         <div class="form-group">
-                          <input type="email" class="form-control" name="Email" id="email" placeholder="Email" formControlName="mail"  required/>
+                          <input type="email" class="form-control" name="Email" id="email" placeholder="Email" formControlName="mail"  required id="email" />
                         </div>
                       </div>
 
                       <div class="col-md-12">
                         <div class="form-group">
-                            <select class="form-control" formControlName="type">
+                            <select class="form-control" formControlName="type" role="form" aria-label="Elige Una Opcion">
                                 <option selected>Asunto</option>
                                 <option value="ventas">Ventas por internet</option>
                                 <option value="fisicas">Tiendas fisicas</option>
@@ -51,13 +51,13 @@
 
                       <div class="col-md-12">
                         <div class="form-group">
-                          <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message" formControlName="message" required></textarea>
+                          <textarea role="textbox "name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message" formControlName="message" required id="mensaje" ></textarea>
                         </div>
                       </div>
 
                       <div class="col-md-12">
                         <div class="form-group">
-                          <button type="submit" value="Send Message" class="btn btn-primary" [disabled]="forma.invalid">
+                          <button type="submit"  (click)="enviarDatos()" value="Send Message" class="btn btn-primary" [disabled]="forma.invalid">
                             Enviar
                           </button>
                         </div>
@@ -73,7 +73,7 @@
                   <h3 class="mb-4 mt-md-4">Contactanos</h3>
                   <div class="dbox w-100 d-flex align-items-start">
                     <div class="icon d-flex align-items-center justify-content-center">
-                        <a routerLink="" class="text-white me-4"><img src="../../assets/About/house-door.svg" title="FB Login" style="width:40px ;" alt=""></a>
+                        <a href="https://g.page/UAAmexico?share" class="text-white me-4" target="_blank" rel="noopener noreferrer"><img src="../../assets/About/house-door.svg" title="Maps" style="width:40px ;" ></a>
                     </div>
                     <div class="text pl-3">
                       <p>
@@ -85,7 +85,7 @@
                   <div class="dbox w-100 d-flex align-items-center">
                     <div
                       class="icon d-flex align-items-center justify-content-center">
-                      <a routerLink="" class="text-white me-4"><img src="../../assets/About/telephone-forward.svg" title="FB Login" style="width:40px ;" alt=""></a>
+                      <a href="https://api.whatsapp.com/send?phone=+524492569709&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n" class="text-white me-4" target="_blank" rel="noopener noreferrer"><img src="../../assets/About/telephone-forward.svg" title="WhatsApp" style="width:40px ;" alt=""></a>
                     </div>
                     <div class="text pl-3">
                       <p>
@@ -96,7 +96,7 @@
                   </div>
                   <div class="dbox w-100 d-flex align-items-center">
                     <div class="icon d-flex align-items-center justify-content-center">
-                        <a routerLink="" class="text-white me-4"><img src="../../assets/About/envelope.svg" title="FB Login" style="width:40px ;" alt=""></a>
+                        <a routerLink="" class="text-white me-4"><img src="../../assets/About/envelope.svg" title="Correo" style="width:40px ;" alt=""></a>
                     </div>
                     <div class="text pl-3">
                       <p>
@@ -107,7 +107,7 @@
                   </div>
                   <div class="dbox w-100 d-flex align-items-center">
                     <div class="icon d-flex align-items-center justify-content-center">
-                        <a routerLink="" class="text-white me-4"><img src="../../assets/About/globe.svg" title="FB Login" style="width:40px ;" alt=""></a>
+                        <a routerLink="" class="text-white me-4"><img src="../../assets/About/globe.svg" title="Pagina Principal" style="width:40px ;" alt=""></a>
                     </div>
                     <div class="text pl-3">
                       <p><span><b style="color: #f77E21;">Website </b></span> <a href="#">PepeFerreteria.com</a></p>                                          

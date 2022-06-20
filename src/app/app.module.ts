@@ -29,7 +29,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { NgChartsModule } from 'ng2-charts';
 import { AnswerandquestionComponent } from './answerandquestion/answerandquestion.component';
 import { AboutComponent } from './about/about.component';
-import { UsdPesosPipe } from '../pipes/usd-pesos.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { TelefonoComponent } from './telefono/telefono.component';
 
 @NgModule({
   declarations: [
@@ -45,8 +46,8 @@ import { UsdPesosPipe } from '../pipes/usd-pesos.pipe';
     AboutComponent,
     FooterComponent,
     CreateArticleComponent,
-    ListArticlesComponent,    
-    UsdPesosPipe
+    ListArticlesComponent,
+    TelefonoComponent
 
   ],
   imports: [
@@ -67,6 +68,7 @@ import { UsdPesosPipe } from '../pipes/usd-pesos.pipe';
     provideRemoteConfig(() => getRemoteConfig()),
     provideStorage(() => getStorage()),
     ReactiveFormsModule,
+    HttpClientModule
    
   ],
   providers: [],

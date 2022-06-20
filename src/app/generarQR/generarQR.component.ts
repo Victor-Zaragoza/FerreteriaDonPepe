@@ -11,7 +11,7 @@ export class GenerarQRComponent implements OnInit {
   public values: string = "";
   public level: "L" | "M" | "Q" | "H";
   public width: number;
-  public item=[""]
+  public item=["FerreteriaFroog", "https://us-central1-ferreteria-c749b.cloudfunctions.net/app/api/articles", "https://us-central1-ferreteria-c749b.cloudfunctions.net/app/hello-world"];
   public myitem : string="";
   public qrInfo :string="";
 
@@ -19,8 +19,9 @@ export class GenerarQRComponent implements OnInit {
     this.level = "M";
     this.values = "";
     this.width = 200;
-    this.myitem ="aqui lo del api";
+    this.myitem ="";
     this.qrInfo = "";
+    this.item=["https://us-central1-ferreteria-c749b.cloudfunctions.net/app/api/users", "https://us-central1-ferreteria-c749b.cloudfunctions.net/app/api/articles", "https://us-central1-ferreteria-c749b.cloudfunctions.net/app/hello-world"];
   }
 
   qrLevel(val: "L" | "M" | "Q" | "H") {
@@ -35,6 +36,11 @@ export class GenerarQRComponent implements OnInit {
     this.width = val;
   }
   ngOnInit(): void {
+  }
+  aleatorio () {
+    this.myitem = this.item [Math.floor(Math.random() * this.item.length)]
+    this.qrInfo=this.myitem
+    return(this.qrInfo) 
   }
 
 }

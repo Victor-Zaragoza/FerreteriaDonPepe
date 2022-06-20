@@ -17,18 +17,12 @@ height: 100%;
     position: relative;
     padding: 0% 10%;
 }
+
 form{
     position: sticky;
     top: 100%;
     bottom: 100%;
     width: 100%;
-}
-body{
-    position: relative;
-    padding-bottom: 2% 0%;
-    display: flex;
-    flex-direction: column;
-    min-width: 100%;
 }
 div #footer{
 background-color: #004a8d;
@@ -65,7 +59,7 @@ background-color: #004a8d;
         }
     }
     
-    @media only screen and (min-width: 321px) and (max-width: 640px){
+    @media only screen and (min-width: 321px) and (max-width: 483px)and (max-width: 640px){
         .card-columns {
             -moz-column-count: 2;
             -webkit-column-count: 2;
@@ -73,14 +67,50 @@ background-color: #004a8d;
         }
         body{
             align-self: start;
-            height: 100vh;
+            height: 100%;
+            position: relative;
+            width: 100%;
         }
         .divxd{
-            padding: 101px 0px;
+            padding: 2% 0%;
+        }
+        .formu{
+            position: relative;
+            top: 0%;            
+            bottom: 15%;
+            width: 96%;
+            padding: 7% 10%;            
         }
         .imgestat{
             position: relative;
-            padding: 10px 10%;
+            padding: 0% 99%;
+        }
+    }
+    @media only screen and (min-height: 0px ) and (max-height: 1080px) and (min-width:321px) and (max-width:1080px){
+        .card-columns {
+            -moz-column-count: 5;
+            -webkit-column-count: 5;
+            column-count: 5;
+        }
+        body{
+            align-self: start;
+            height: 100%;
+            position: relative;
+            width: 100%;
+        }
+        .divxd{
+            padding: 10px 10px;
+        }        
+        .imgestat{
+            position: relative;
+            padding: 0% 19%;
+        } 
+        .formu{
+            position: absolute;
+            top: 0%;            
+            bottom: 15%;
+            width: 96%;
+            padding: 7% 10%;            
         }
     }
     @media only screen and (min-width: 641px) and (max-width: 670px) and (max-width: 960px){
@@ -91,28 +121,26 @@ background-color: #004a8d;
         }
         body{
             align-self: start;
-            height: 110%;
-            /* position: relative; */
+            height: 100%;
+            position: relative;
+            width: 100%;
         }
         .divxd{
-            padding: 100px 100px;
-        }
-        .imgdx{
-            padding: 0% 35%;
+            padding: 3% 0%;
         }
         .imgestat{
             position: relative;
-            padding: 0% 3%;
+            padding: 0% 12%;
         }
         .formu{
             position: absolute;
-            top: 9%;            
-            bottom: 195%;
-            width: 100%;
-            padding: 1% 10%;
+            top: 0%;            
+            bottom: 15%;
+            width: 96%;
+            padding: 7% 10%;            
         }
     }
-    @media only screen and (min-width: 961px) and (max-width: 1079px) {
+    @media only screen and (min-width: 961px) and (max-width: 991px) {
         .card-columns {
             -moz-column-count: 4;
             -webkit-column-count: 4;
@@ -123,12 +151,9 @@ background-color: #004a8d;
             height: 100%;
             position: relative;                       
         }
-        .imgdx{            
-            padding: 0% 16%;
-        }
         .imgestat{
             position: relative;
-            padding: 0% 3%;
+            padding: 0% 7%;
         }
         .divxd{
             padding: 2% 0%;
@@ -141,7 +166,7 @@ background-color: #004a8d;
             padding: 1% 10%;
         }
     }
-    @media only screen and (min-width: 1080px) and (max-width: 1280px){
+    @media only screen and (min-width: 992px) and (max-width: 1280px){
         .card-columns {
             -moz-column-count: 4;
             -webkit-column-count: 4;
@@ -149,28 +174,18 @@ background-color: #004a8d;
         }
         body{    
             align-self: start;
-            height: 100%;
+            height: 100%;                    
             position: relative;                       
-        }
-        .imgdx{            
-            padding: 0% 16%;
         }
         .imgestat{
             position: relative;
-            padding: 0% 3%;
+            padding: 15% 3%;
         }
         .divxd{
             padding: 2% 0%;
         }
-        .formu{
-            position: absolute;
-            top: 21%;            
-            bottom: 195%;
-            width: 100%;
-            padding: 1% 10%;
-        }
     }
-    @media only screen and (min-width: 1281px) and (max-width: 1600px){
+    @media only screen and (min-width: 1281px) and (max-width: 1513px){
         .card-columns {
             -moz-column-count: 4;
             -webkit-column-count: 4;
@@ -183,14 +198,14 @@ background-color: #004a8d;
         }
         .divxd{
             top:110%;
-            padding: 190px 0px;
+            padding: 2% 0%;
         }
         .imgestat{
             position: relative;
-            padding: 10% 2%;
+            padding: 19% 3%;
         }
     }
-    @media only screen and (min-width: 1601px){
+    @media only screen and (min-width: 1514px) and (max-width: 1601px){
         .card-columns {
             -moz-column-count: 5;
             -webkit-column-count: 5;
@@ -221,15 +236,35 @@ background-color: #004a8d;
             position: relative;
         }
         .divxd{
-            padding: 170px 0px;
+            padding: 10px 0px;
         }
         .imgestat{
             position: relative;
-            padding: 10% 1%;
+            padding: 5% 1%;
         }
     }
 
-    @media only screen and (min-width: 75%) and (max-width: 1280px){
+    @media only screen and (max-width: 50%){
+        .card-columns {
+            -moz-column-count: 3;
+            -webkit-column-count: 3;
+            column-count: 3;
+        }
+        div{
+            position: relative;  
+            top: 50%;        
+            padding: 7% 10%;            
+        }
+        .formu{
+            position: relative;
+            top: 50%;            
+            bottom: 15%;
+            height: 50%;
+            width: 96%;
+            padding: 7% 10%;            
+        }
+    }
+    @media only screen and (min-width: 25%) and (max-width: 200%){
         .card-columns {
             -moz-column-count: 4;
             -webkit-column-count: 4;
@@ -238,13 +273,26 @@ background-color: #004a8d;
         body{    
             align-self: start;
             height: 100%;
+            bottom: 0;
             position: relative;
-        }
-        .imgdx{            
-            padding: 0px 130px;
+            
         }
         .imgestat{
             position: relative;
             padding: 0% 3%;
+        }
+        div{
+            position: relative;              
+            padding: 7% 10%;            
+        }
+        .formu{
+            position: relative;            
+            bottom: 15%;
+            height: 50%;
+            width: 96%;
+            padding: 7% 10%;            
+        }
+        section{
+            height: 100%;
         }
     }

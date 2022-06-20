@@ -1,12 +1,8 @@
 .footer{
     overflow: hidden; 
-    position: relative;
-    top: 10%;
-    bottom: 100%;
-    width: 100%;
-    padding: 1% 10%;
-    margin-top: auto;
-    background-color: #004a8d;    
+    position: sticky;
+    top: 100%;
+    background-color: #004a8d;       
 }
 
 h1{
@@ -33,8 +29,6 @@ p{
 body{
     height: 12vh;
     font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    padding-bottom: 2% 0% ;    
 }
 
 h3{
@@ -51,6 +45,7 @@ h3{
     body{
         align-self: start;
         height: 23vh;
+        padding: 7% 2%;
     }
     img{
         padding-top: 10px;
@@ -96,6 +91,7 @@ h3{
     body{
         align-self: start;
         height: 23vh;
+        padding: 7% 2%; 
     }
     img{
         padding-top: 10px;
@@ -139,10 +135,8 @@ h3{
     }
     body{
         align-self: start;
-        height: 30vh;
-        padding: 102% 65%;
-        display: flex;
-        flex-direction: column;
+        height: 14vh;
+        padding: 3% 2%; 
     }
     h3{
         position: absolute;
@@ -163,17 +157,18 @@ h3{
         padding: 0px 0px;
         position: relative;
         align-items: left;
-    } 
+    }   
 }
-@media only screen and (min-width: 961px) and (max-width: 1280px){
+@media only screen and (min-width: 961px) and (max-width: 991px){
     .card-columns {
         -moz-column-count: 3;
         -webkit-column-count: 3;
         column-count: 3;
+        padding: 2% 2%;
     }
     body{
         align-self: start;
-        height: 14vh;
+        height: 100%;
     }
     h1{
         position: absolute;
@@ -182,7 +177,7 @@ h3{
     }
     p{
         position: absolute;
-        font-size: 9px;
+        font-size: 11px;
         padding: 52px 0px;
         padding-left: -30px;        
         padding-top: 55px;
@@ -193,55 +188,132 @@ h3{
         padding: 0px 0px;
     }
 }
-@media only screen and (min-width: 1281px) and (max-width: 1600px){
+@media only screen and (min-width: 992px) and (max-width: 1151px){
     .card-columns {
         -moz-column-count: 4;
         -webkit-column-count: 4;
         column-count: 4;
     }
     body{
+        position: relative;
         align-self: start;
-        height: 10vh;        
+        padding-bottom: 52%;
+        height: 100%;        
+        padding: 1% 2%;       
     }
     h1{
-        font-size: 20px;
+        font-size: 28px;
         position: relative;
         padding: 10px 10px;     
     }
     p{
-        font-size: 15px;
-        padding: 10px 10px;
+        font-size: 22px;
+        padding: 10px 15px;
     }
     h3{
-        font-size: 10px;
+        font-size: 15px;
     }
     h2{
-        font-size: 12px;
+        font-size: 15px;
     }
     img{
         padding: 0px 0px;
     }
 }
-@media only screen and (min-width: 1601px){
+@media only screen and (min-width: 1152px) and (max-width: 1190px){
+    .card-columns {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+    body{
+        position: relative;
+        align-self: start;
+        padding-bottom: 52%;
+        height: 100%;        
+        padding: 3% 2%;       
+    }
+    h1{
+        font-size: 28px;
+        position: relative;
+        padding: 10px 10px;     
+    }
+    p{
+        font-size: 22px;
+        padding: 10px 15px;
+    }
+    h3{
+        font-size: 15px;
+    }
+    h2{
+        font-size: 15px;
+    }
+    img{
+        padding: 0px 0px;
+    }
+}
+@media only screen and (min-width: 1191px) and (max-width: 1600px){
+    .card-columns {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+    body{
+        position: relative;
+        align-self: start;
+        padding-bottom: 52%;
+        height: 100%;        
+        padding: 3% 2%;       
+    }
+    h1{
+        font-size: 32px;
+        position: relative;
+        padding: 10px 10px;     
+    }
+    p{
+        font-size: 28px;
+        padding: 10px 15px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    img{
+        padding: 0px 0px;
+    }
+}
+@media only screen and (min-width: 1601px) and (max-width: 1920px){
     .card-columns {
         -moz-column-count: 5;
         -webkit-column-count: 5;
         column-count: 5;
     }
     body{
+        position: relative;
         align-self: start;
-        height: 10vh;        
+        top: 500%;
+        padding-bottom: 2%;
+        height: 100%;        
+        padding: 3% 2%;       
     }
     h1{
-        font-size: 22px;
-        padding: 0px 2px;        
+        font-size: 55px;
+        position: relative;
+        padding: 10px 10px;     
     }
     p{
-        position: relative;
-        font-size: 16px;
-        padding: 1px 2px;
+        font-size: 40px;
+        padding: 10px 15px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 30px;
     }
     img{
-        padding: 0px 2px;
+        padding: 0px 0px;
     }
 }
